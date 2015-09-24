@@ -75,7 +75,7 @@ function concentrese_santiago_created(evt) {
     objEvt = merge_options(objEvt, read_extra_data(evt));
 
     if (objEvt.block) {
-        objEvt.show_answers = true;
+        //objEvt.show_answers = true;
     }
 
     send_evt_to(evt.identify, objEvt, "created");
@@ -98,7 +98,7 @@ function sopa_letras_toscano_created(evt) {
     objEvt = merge_options(objEvt, read_extra_data(evt));
 
     if (objEvt.block) {
-        objEvt.show_answers = true;
+        //objEvt.show_answers = true;
     }
 
     send_evt_to(evt.identify, objEvt, "created");
@@ -183,7 +183,7 @@ function drag_drop_toscano_created(evt) {
     objEvt = merge_options(objEvt, read_extra_data(evt));
 
     if (objEvt.block) {
-        objEvt.show_answers = true;
+        //objEvt.show_answers = true;
     }
 
     send_evt_to(evt.identify, objEvt, "created");
@@ -203,7 +203,7 @@ function pick_many_toscano_created(evt) {
     objEvt = merge_options(objEvt, read_extra_data(evt));
 
     if (objEvt.block) {
-        objEvt.show_answers = true;
+        //objEvt.show_answers = true;
     }
 
     send_evt_to(evt.identify, objEvt, "created");
@@ -262,6 +262,25 @@ $(document).on("EDGE_Plantilla_submitApplied", function (evt) {
             console.error("Submit inexistente", evt.identify);
             break;
     }
+});
+
+function send_fake_submit() {
+    //console.log(EDGE_Plantilla.pagina_actual);
+    var pagina = EDGE_Plantilla.config.paginas[EDGE_Plantilla.id_pagina_actual];
+    
+    var objEvt = {
+        type: "EDGE_Recurso_postSubmitApplied",
+        sym: pagina.stage,
+        //attempts: this.sym.prop("ed_attemps"),
+        show_answers: true
+    };
+    //alert("sending");
+    var sym_contenedor =
+            buscar_sym(EDGE_Plantilla.plantilla_sym, EDGE_Plantilla.basic_contenedor_name.contenedor);
+    $('iframe', sym_contenedor.ele)[0].contentWindow.$('body').trigger(objEvt);
+}
+$(document).on("EDGE_Plantilla_FakeSubmit", function () {
+    send_fake_submit();
 });
 
 function R5_QQSM_heiner_submit(evt) {
@@ -448,7 +467,7 @@ function R6_heiner_submit(evt) {
         EDGE_Plantilla.debug ? console.log("RESPUESTAS CORRECTAS") : false;
         objEvt = merge_options(objEvt, {
             block: true,
-            show_answers: false,
+            //show_answers: false,
             attempts: evt.attempts
         });
         strRetro = isEmpty(strRetro) ? "correct" : strRetro;
@@ -461,7 +480,7 @@ function R6_heiner_submit(evt) {
         EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
-        strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        strRetro = isEmpty(strRetro) || attemps.block ? "incorrect" : strRetro;
         if (!attemps.block) {
             strRetro = "nuevo_intento";
         }
@@ -540,7 +559,7 @@ function R6_heiner_submit(evt) {
         EDGE_Plantilla.debug ? console.log("RESPUESTAS INCORRECTAS") : false;
         var attemps = attemps_answer(evt);
         objEvt = merge_options(objEvt, attemps);
-        strRetro = isEmpty(strRetro) || objEvt.show_answers ? "incorrect" : strRetro;
+        strRetro = isEmpty(strRetro) || attemps.block ? "incorrect" : strRetro;
         if (!attemps.block) {
             strRetro = "nuevo_intento";
         }
@@ -1103,7 +1122,7 @@ function attemps_answer(evt) {
 
     objAttemps = merge_options(objAttemps, {
         block: this_block,
-        show_answers: this_show_answers,
+        //show_answers: this_show_answers,
         attempts: intentos
     });
 

@@ -8,7 +8,8 @@
         vid='media/',
         js='js/',
         fonts = {
-            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>'        },
+            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>',
+            'scroll_bar': '<link rel=\"stylesheet\" href=\"css/scrollbar.css\" type=\"text/css\" media=\"screen\" title=\"\" charset=\"utf-8\" />'        },
         opts = {
             'gAudioPreloadPreference': 'auto',
             'gVideoPreloadPreference': 'auto'
@@ -16,6 +17,8 @@
         resources = [
         ],
         scripts = [
+            js+"jquery-1.11.3.min.js",
+            js+"zoomUtilities.js"
         ],
         symbols = {
             "stage": {
@@ -52,90 +55,90 @@
                                 overflow: 'visible',
                                 c: [
                                 {
-                                    id: 'Texto_habilidades',
+                                    id: 'texto_2',
                                     type: 'text',
-                                    rect: ['348px', '52px', '1118px', '28px', 'auto', 'auto'],
+                                    rect: ['348px', '30px', '1118px', '28px', 'auto', 'auto'],
                                     text: "<p style=\"margin: 0px;\">​<span style=\"font-weight: 700;\">Habilidades: </span>estos íconos indican las habilidades más destacadas dentro de la temática.</p>",
                                     align: "left",
                                     font: ['source-sans-pro, sans-serif', [25, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
                                     textStyle: ["", "", "", "", "none"]
                                 },
                                 {
-                                    id: 'Texto_practiquemos',
+                                    id: 'texto_3',
                                     type: 'text',
-                                    rect: ['348px', '173px', '1118px', '28px', 'auto', 'auto'],
+                                    rect: ['348px', '151px', '1118px', '28px', 'auto', 'auto'],
                                     text: "<p style=\"margin: 0px;\">​<span style=\"font-weight: 700;\">Practiquemos: </span>estas son actividades de práctica.</p>",
                                     align: "left",
                                     font: ['source-sans-pro, sans-serif', [25, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
                                     textStyle: ["", "", "", "", "none"]
                                 },
                                 {
-                                    id: 'Texto_empecemos',
+                                    id: 'texto_4',
                                     type: 'text',
-                                    rect: ['348px', '293px', '1118px', '28px', 'auto', 'auto'],
+                                    rect: ['348px', '271px', '1118px', '28px', 'auto', 'auto'],
                                     text: "<p style=\"margin: 0px;\">​<span style=\"font-weight: 700;\">Empecemos:</span> aquí encontrará la introducción a la temática de estudio.</p>",
                                     align: "left",
                                     font: ['source-sans-pro, sans-serif', [25, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
                                     textStyle: ["", "", "", "", "none"]
                                 },
                                 {
-                                    id: 'Texto_exploremos',
+                                    id: 'texto_5',
                                     type: 'text',
-                                    rect: ['348px', '414px', '1118px', '28px', 'auto', 'auto'],
+                                    rect: ['348px', '392px', '1118px', '28px', 'auto', 'auto'],
                                     text: "<p style=\"margin: 0px;\">​<span style=\"font-weight: 700;\">Exploremos: </span>aquí inicia su proceso de aprendizaje.</p>",
                                     align: "left",
                                     font: ['source-sans-pro, sans-serif', [25, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
                                     textStyle: ["", "", "", "", "none"]
                                 },
                                 {
-                                    id: 'Texto_evaluemos',
+                                    id: 'texto_6',
                                     type: 'text',
-                                    rect: ['348px', '535px', '1118px', '28px', 'auto', 'auto'],
+                                    rect: ['348px', '513px', '1118px', '28px', 'auto', 'auto'],
                                     text: "<p style=\"margin: 0px;\">​<span style=\"font-weight: 700;\">Evaluemos: </span>aquí se verificará su progreso de aprendizaje.</p>",
                                     align: "left",
                                     font: ['source-sans-pro, sans-serif', [25, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
                                     textStyle: ["", "", "", "", "none"]
                                 },
                                 {
-                                    id: 'Texto_aprendamos_en_papel',
+                                    id: 'texto_7',
                                     type: 'text',
-                                    rect: ['348px', '655px', '1118px', '28px', 'auto', 'auto'],
+                                    rect: ['348px', '627px', '1118px', '28px', 'auto', 'auto'],
                                     text: "<p style=\"margin: 0px;\">​<span style=\"font-weight: 700;\">Aprendamos en papel (PDF): </span>aquí encontrará la versión imprimible de la temática y actividades.</p>",
                                     align: "left",
                                     font: ['source-sans-pro, sans-serif', [25, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
                                     textStyle: ["", "", "", "", "none"]
                                 },
                                 {
-                                    id: 'Texto_punto_de_aprendizaje',
+                                    id: 'texto_8',
                                     type: 'text',
-                                    rect: ['348px', '776px', '1118px', '28px', 'auto', 'auto'],
+                                    rect: ['348px', '748px', '1118px', '28px', 'auto', 'auto'],
                                     text: "<p style=\"margin: 0px;\">​<span style=\"font-weight: 700;\">Punto de aprendizaje:</span> aquí encontrará la gramática más relevante de la temática.</p>",
                                     align: "left",
                                     font: ['source-sans-pro, sans-serif', [25, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
                                     textStyle: ["", "", "", "", "none"]
                                 },
                                 {
-                                    id: 'Texto_vocabulario',
+                                    id: 'texto_9',
                                     type: 'text',
-                                    rect: ['348px', '893px', '1118px', '28px', 'auto', 'auto'],
+                                    rect: ['348px', '871px', '1118px', '28px', 'auto', 'auto'],
                                     text: "<p style=\"margin: 0px;\">​<span style=\"font-weight: 700;\">Vocabulario:</span> aquí encontrará el vocabulario más relevante de la temática.</p>",
                                     align: "left",
                                     font: ['source-sans-pro, sans-serif', [25, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
                                     textStyle: ["", "", "", "", "none"]
                                 },
                                 {
-                                    id: 'texto_menu_herramientas',
+                                    id: 'texto_10',
                                     type: 'text',
-                                    rect: ['348px', '1055px', '1118px', '73px', 'auto', 'auto'],
+                                    rect: ['348px', '1033px', '1118px', '73px', 'auto', 'auto'],
                                     text: "<p style=\"margin: 0px;\">​<span style=\"font-weight: 700;\">Menú herramientas: </span>pantalla completa (full screen), créditos, ayuda, apagar sonidos de la interfaz, información del producto, accesibilidad.</p>",
                                     align: "left",
                                     font: ['source-sans-pro, sans-serif', [25, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
                                     textStyle: ["", "", "", "", "none"]
                                 },
                                 {
-                                    id: 'Texto_cabezote',
+                                    id: 'texto_11',
                                     type: 'text',
-                                    rect: ['348px', '1259px', '1118px', '28px', 'auto', 'auto'],
+                                    rect: ['348px', '1237px', '1118px', '28px', 'auto', 'auto'],
                                     text: "<p style=\"margin: 0px;\">​<span style=\"font-weight: 700;\">Cabezote: </span>esta es la ruta que describe el idioma, nivel y nombre de la lección.</p><p style=\"margin: 0px;\"></p>",
                                     align: "left",
                                     font: ['source-sans-pro, sans-serif', [25, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
@@ -184,7 +187,7 @@
                                     id: 'empecemos',
                                     type: 'image',
                                     tag: 'img',
-                                    rect: ['109px', '254px', '100px', '100px', 'auto', 'auto'],
+                                    rect: ['109px', '252px', '100px', '100px', 'auto', 'auto'],
                                     fill: ["rgba(0,0,0,0)",im+"empecemos.png",'0px','0px'],
                                     transform: [[],[],[],['0.8','0.8']]
                                 },
@@ -337,7 +340,7 @@
                             cursor: 'pointer'
                         },
                         {
-                            id: 'Text',
+                            id: 'texto_1',
                             type: 'text',
                             rect: ['300px', '77px', 'auto', 'auto', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">​Ayuda</p>",
@@ -381,17 +384,16 @@
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
-                            id: 'cerrar',
-                            transform: [[], [], [], ['0.5', '0.5']],
                             type: 'image',
+                            id: 'cerrar',
+                            rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.5', '0.5']],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '76px', '77px']
+                            rect: [null, null, '76px', '77px']
                         }
                     }
                 },

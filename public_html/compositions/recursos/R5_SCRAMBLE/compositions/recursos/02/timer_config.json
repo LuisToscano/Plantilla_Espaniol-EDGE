@@ -1,7 +1,0 @@
-{
-    "segundos": 20,
-    "alertas": {
-		"10":{"tag": "alert"}
-	},
-    "sym": ["TIMER_CONTAINER"]
-}

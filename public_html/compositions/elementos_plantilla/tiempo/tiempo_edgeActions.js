@@ -23,11 +23,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
       
-      Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
-         // Insertar código para ejecutarse cuando el símbolo se crea aquí
-         $(".center-wrapper").css({overflow: "hidden"});
-
-      });
+      Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function (sym, e) {
+            // Insertar código para ejecutarse cuando el símbolo se crea aquí
+            $(".center-wrapper, body").css({overflow: "hidden"});
+        });
+        //Edge binding end
 
    })("stage");
    //Edge symbol end:'stage'

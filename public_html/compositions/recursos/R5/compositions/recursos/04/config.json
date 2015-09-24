@@ -1,0 +1,58 @@
+{
+    "num_intentos": 2,
+    "pregunta":"prueba de pregunta drag and drop",
+    "tipo": "uno a uno",
+    "drags": {
+        "1": {
+            "descripcion": "letra m"
+        },
+        "2": {
+            "descripcion": "letra e"
+        },
+        "3": {
+            "descripcion": "letra s"
+        },
+        "4": {
+            "descripcion": "letra a"
+        },
+
+        "5": {
+            "descripcion": "letra r"
+        },
+
+        "6": {
+            "descripcion": "letra o"
+        },
+
+        "7": {
+            "descripcion": "letra n"
+        },
+
+        "8": {
+            "descripcion": "letra d"
+        },
+
+        "9": {
+            "descripcion": "letra h"
+        }
+
+    },
+    "drops": {
+        "1": {
+            "descripcion": "box m",
+            "accepted": ["1"]
+        },
+        "2": {
+            "descripcion": "box e",
+            "accepted": ["2"]
+        },
+        "3": {
+            "descripcion": "box s",
+            "accepted": ["3"]
+        },
+        "4": {
+            "descripcion": "box a",
+            "accepted": ["4"]
+        }
+    }
+}

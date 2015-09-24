@@ -1,22 +1,23 @@
 {
     "num_intentos": 2,
-    "pregunta":"Seleccione las imagenes correspondientes al deletreo del audio",
+    "pregunta":"seleccione la respuesta correcta. Tiene distractores.",
     "picks": {
         "1": {
-            "descripcion": "camiseta",
-            "esRespuesta": true
+            "descripcion": "t, n, t",
+            "esRespuesta": false
         },
         "2": {
-            "descripcion": "bufanda",
+            "descripcion": "t, m, d",
             "esRespuesta": false
         },
         "3": {
-            "descripcion": "zapatos",
-            "esRespuesta": false
+            "descripcion": "t, m, t",
+            "esRespuesta": true
         },
         "4": {
-            "descripcion": "medias",
+            "descripcion": "d, m, t",
             "esRespuesta": false
-        }        
+        }
+        
     }
 }

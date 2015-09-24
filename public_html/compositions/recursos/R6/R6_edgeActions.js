@@ -15,36 +15,42 @@
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function (sym, e) {
             sym.stop();
+            pagina_actual(1);
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function (sym, e) {
             sym.stop();
+            //pagina_actual("portada");
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function (sym, e) {
             sym.stop();
+            pagina_actual(2);
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1500, function (sym, e) {
             sym.stop();
+            pagina_actual(3);
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function (sym, e) {
             sym.stop();
+            pagina_actual(4);
 
         });
         //Edge binding end
 
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2500, function (sym, e) {
             sym.stop();
+            pagina_actual(5);
 
         });
         //Edge binding end
@@ -82,6 +88,7 @@
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
          // introducir código aquí
          sym.stop();
+         pagina_actual("final");
 
       });
       //Edge binding end

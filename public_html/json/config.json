@@ -7,7 +7,7 @@
         "1": {
             "type": "portada",
             "recurso": "1",
-            "url": "recursos/R1/esn1le01ob02r1.html",
+            "url": "recursos/R1/esn1le01ob01r1.html",
             "al_cerrar": {
                 "cargar": "2",
                 "cambia_color": "2"
@@ -19,7 +19,7 @@
         "2": {
             "type": "recurso",
             "recurso": "2",
-            "url": "recursos/R2/esn1le01ob02r2.html",
+            "url": "recursos/R2/esn1le01ob01r2.html",
             "titulo": "Exploremos",
             "subtitulo": "Las letras",
             "has_jquery": true
@@ -28,7 +28,7 @@
             "type": "actividad",
             "recurso": "3",
             "actividad": "drag_drop",
-            "url": "recursos/R3/esn1le01ob02r3.html",
+            "url": "recursos/R3/esn1le01ob01r3.html",
             "interaction": {
                 "ALL": true
             },
@@ -40,7 +40,7 @@
             "type": "actividad",
             "recurso": "4",
             "actividad": "drag_drop",
-            "url": "recursos/R5_QQSM/R5.html",
+            "url": "recursos/R4/le1obj1r4.html",
             "interaction": {
                 "ALL": true
             },
@@ -51,8 +51,8 @@
         "5": {
             "type": "actividad",
             "recurso": "5",
-            "actividad": "R5_CARRERA",
-            "url": "recursos/R5_CARRERA/R5.html",
+            "actividad": "R5_SCRAMBLE",
+            "url": "recursos/R5/contenedor_externo.html",
             "interaction": {
                 "ALL": true
             },

@@ -9,7 +9,7 @@
         js='js/',
         fonts = {
             'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>',
-            'sena_icon': '<link rel=\"stylesheet\" href=\"stylesheet.css\" type=\"text/css\" media=\"screen\" title=\"\" charset=\"utf-8\" />'        },
+            'sena_icon': '<link rel=\"stylesheet\" href=\"css/stylesheet.css\" type=\"text/css\" media=\"screen\" title=\"\" charset=\"utf-8\" />'        },
         opts = {
             'gAudioPreloadPreference': 'auto',
             'gVideoPreloadPreference': 'auto'
@@ -18,7 +18,7 @@
         ],
         scripts = [
             js+"jquery-1.11.3.min.js",
-            js+"detect-zoom.min.js",
+            js+"zoomUtilities.js",
             js+"jquery-migrate-1.2.1.js",
             js+"jquery-ui-1.11.4.custom/jquery-ui.min.js",
             js+"jquery.fullscreen-0.5.0/jquery.fullscreen.min.js",
@@ -48,7 +48,7 @@
                             id: 'back_contenedor_home',
                             symbolName: 'back_contenedor_home',
                             type: 'rect',
-                            rect: ['41px', '133px', '1838', '785', 'auto', 'auto'],
+                            rect: ['41px', '135px', '1838', '785', 'auto', 'auto'],
                             overflow: 'hidden',
                             transform: [[],[],[],['0.99565','0.99363']]
                         },
@@ -130,25 +130,23 @@
                             cursor: 'pointer'
                         },
                         {
-                            id: 'bannerCopy',
+                            id: 'BTN-tools-Gris-48',
                             type: 'image',
                             tag: 'img',
-                            rect: ['20px', '20px', '1882px', '114px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"banner2.png",'0px','0px'],
-                            filter: [1, 0, 2, 0, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
+                            rect: ['1794px', '20px', '109px', '101px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"BTN-tools-Gris-48.png",'0px','0px']
+                        },
+                        {
+                            id: 'nivel',
+                            symbolName: 'nivel',
+                            type: 'rect',
+                            rect: ['21', '96', '1881', '42', 'auto', 'auto']
                         },
                         {
                             id: 'banner',
                             type: 'image',
                             rect: ['20px', '20px', '1882px', '114px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"banner.png",'0px','0px']
-                        },
-                        {
-                            id: 'nivel',
-                            type: 'image',
-                            tag: 'img',
-                            rect: ['21px', '55px', '1880px', '80px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"nivel.png",'0px','0px']
                         },
                         {
                             id: 'btnr_7',
@@ -207,19 +205,12 @@
                             rect: ['-2', '136', '1924', '946', 'auto', 'auto']
                         },
                         {
-                            id: 'BTN-tools-ES',
-                            type: 'image',
-                            tag: 'img',
-                            rect: ['1793px', '20px', '107px', '101px', 'auto', 'auto'],
-                            cursor: 'pointer',
-                            fill: ["rgba(0,0,0,0)",im+"BTN-tools-ES.png",'0px','0px'],
-                            filter: [1, 0, 2, 0, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
-                        },
-                        {
                             id: 'btn_menugrafico',
                             symbolName: 'btn_menugrafico',
                             type: 'rect',
-                            rect: ['1794', '20', '107', '101', 'auto', 'auto']
+                            rect: ['1793px', '20', '107', '101', 'auto', 'auto'],
+                            cursor: 'pointer',
+                            transform: [[],[],[],['1.01451']]
                         },
                         {
                             id: 'menu_grafico',
@@ -289,7 +280,7 @@
                             id: 'btn_ayuda',
                             symbolName: 'btn_ayuda',
                             type: 'rect',
-                            rect: ['1793px', '324px', 'undefined', 'undefined', 'auto', 'auto'],
+                            rect: ['1795px', '324px', 'undefined', 'undefined', 'auto', 'auto'],
                             cursor: 'pointer',
                             transform: [[],[],[],['0.99074']]
                         },
@@ -327,7 +318,7 @@
                             id: 'btn_sena',
                             symbolName: 'btn_sena',
                             type: 'rect',
-                            rect: ['16', '18', '239', '173', 'auto', 'auto']
+                            rect: ['16', '18px', '239', '173', 'auto', 'auto']
                         },
                         {
                             id: 'titulo',
@@ -399,9 +390,9 @@
                     dom: [
                         {
                             rect: ['108px', '0px', '107px', '80px', 'auto', 'auto'],
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            id: 'Rectangle',
                             opacity: '0',
+                            id: 'Rectangle',
+                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             type: 'rect',
                             fill: ['rgba(255,255,255,0.29)']
                         },
@@ -411,59 +402,32 @@
                             id: 'RoundRect2',
                             opacity: '0',
                             rect: ['0px', '14px', '92px', '53px', 'auto', 'auto'],
-                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.36)'],
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             fill: ['rgba(79,45,110,1.00)'],
+                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.36)'],
                             c: [
                             {
+                                transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
                                 rect: ['83px', '19px', '15px', '15px', 'auto', 'auto'],
-                                transform: [[], ['45']],
-                                id: 'Rectangle3Copy',
-                                stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                                type: 'rect',
-                                fill: ['rgba(79,45,110,1)']
-                            },
-                            {
-                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto'],
-                                textStyle: ['', '', '', '', 'none'],
-                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
-                                id: 'TextCopy',
-                                text: '<p style=\"margin: 0px;\">​Audio</p>',
-                                align: 'center',
-                                type: 'text'
-                            },
-                            {
-                                rect: ['83px', '19px', '15px', '15px', 'auto', 'auto'],
-                                transform: [[], ['45']],
                                 id: 'Rectangle3',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto'],
-                                textStyle: ['', '', '', '', 'none'],
-                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
-                                id: 'Text',
-                                text: '<p style=\"margin: 0px;\">​Audio</p>',
+                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1)', '400', 'none', 'normal', 'break-word', 'nowrap'],
+                                type: 'text',
                                 align: 'center',
-                                type: 'text'
+                                id: 'Text',
+                                textStyle: ['', '', '', '', 'none'],
+                                text: '<p style=\"margin: 0px;\">​Audio</p>',
+                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto']
                             }]
-                        },
-                        {
-                            rect: ['107px', '0px', '108px', '80px', 'auto', 'auto'],
-                            textStyle: ['', '', '79px', '', 'none'],
-                            font: ['sena_icon', [68, 'px'], 'rgba(255,0,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
-                            id: 'TextCopy6',
-                            text: '<p style=\"margin: 0px;\">​​S</p>',
-                            align: 'center',
-                            type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '215px', '80px']
+                            rect: [null, null, '215px', '80px']
                         }
                     }
                 },
@@ -528,11 +492,24 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            id: 'RectangleCopy',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
+                            type: 'text',
+                            id: 'TX_AcontraCopy6',
+                            textStyle: ['', '', '81px', '', 'none'],
+                            font: ['sena_icon', [68, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
+                            display: 'block',
                             rect: ['0px', '0px', '108px', '80px', 'auto', 'auto'],
-                            fill: ['rgba(255,0,0,0.00)']
+                            text: '<p style=\"margin: 0px;\">​​S</p>',
+                            align: 'center'
+                        },
+                        {
+                            type: 'text',
+                            id: 'TX_AcontraCopy7',
+                            textStyle: ['', '', '81px', '', 'none'],
+                            font: ['sena_icon', [68, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
+                            display: 'none',
+                            rect: ['0px', '0px', '108px', '80px', 'auto', 'auto'],
+                            text: '<p style=\"margin: 0px;\">​6</p>',
+                            align: 'center'
                         }
                     ],
                     style: {
@@ -542,10 +519,43 @@
                     }
                 },
                 timeline: {
-                    duration: 0,
+                    duration: 250,
                     autoPlay: true,
+                    labels: {
+                        "on": 0,
+                        "off": 250
+                    },
                     data: [
-
+                        [
+                            "eid454",
+                            "display",
+                            250,
+                            0,
+                            "linear",
+                            "${TX_AcontraCopy6}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid453",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${TX_AcontraCopy7}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid452",
+                            "display",
+                            250,
+                            0,
+                            "linear",
+                            "${TX_AcontraCopy7}",
+                            'none',
+                            'block'
+                        ]
                     ]
                 }
             },
@@ -577,13 +587,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
+                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
                                 type: 'text',
-                                rect: ['13px', '11px', 'auto', 'auto', 'auto', 'auto'],
                                 text: '<p style=\"margin: 0px;\">​Evaluemos</p>',
                                 id: 'TextCopy7',
                                 textStyle: ['', '', '24px', '', ''],
                                 align: 'center',
-                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap']
+                                rect: ['13px', '11px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -672,13 +682,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
+                                rect: ['18px', '11px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
-                                type: 'text',
                                 align: 'center',
                                 id: 'TextCopy',
                                 textStyle: ['', '', '24px', '', ''],
                                 text: '<p style=\"margin: 0px;\">​Exploremos</p>',
-                                rect: ['18px', '11px', 'auto', 'auto', 'auto', 'auto']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -767,13 +777,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
+                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
-                                type: 'text',
                                 align: 'center',
                                 id: 'TextCopy2',
                                 textStyle: ['', '', '24px', '', ''],
                                 text: '<p style=\"margin: 0px;\">​Practiquemos</p>',
-                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -862,13 +872,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
+                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
-                                type: 'text',
                                 align: 'center',
                                 id: 'TextCopy5',
                                 textStyle: ['', '', '24px', '', ''],
                                 text: '<p style=\"margin: 0px;\">​Practiquemos</p>',
-                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -957,13 +967,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
+                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto'],
                                 font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
-                                type: 'text',
                                 align: 'center',
                                 id: 'TextCopy6',
                                 textStyle: ['', '', '24px', '', ''],
                                 text: '<p style=\"margin: 0px;\">​Practiquemos</p>',
-                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto']
+                                type: 'text'
                             }]
                         }
                     ],
@@ -1052,13 +1062,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
+                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
                                 type: 'text',
-                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto'],
                                 align: 'center',
                                 id: 'Text',
                                 textStyle: ['', '', '24px', '', ''],
                                 text: '<p style=\"margin: 0px;\">​Empecemos</p>',
-                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap']
+                                rect: ['14px', '11px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -1119,202 +1129,6 @@
                     ]
                 }
             },
-            "btnR_1": {
-                version: "6.0.0",
-                minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
-                scaleToFit: "none",
-                centerStage: "none",
-                resizeInstances: false,
-                content: {
-                    dom: [
-                        {
-                            rect: ['0px', '0px', '110px', '110px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
-                            id: 'Ellipse',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'ellipse',
-                            fill: ['rgba(255,0,0,0.51)']
-                        }
-                    ],
-                    style: {
-                        '${symbolSelector}': {
-                            rect: [null, null, '110px', '110px']
-                        }
-                    }
-                },
-                timeline: {
-                    duration: 0,
-                    autoPlay: true,
-                    data: [
-
-                    ]
-                }
-            },
-            "btnR_2": {
-                version: "6.0.0",
-                minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
-                scaleToFit: "none",
-                centerStage: "none",
-                resizeInstances: false,
-                content: {
-                    dom: [
-                        {
-                            rect: ['0px', '0px', '110px', '110px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
-                            id: 'Ellipse',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'ellipse',
-                            fill: ['rgba(255,0,0,0.51)']
-                        }
-                    ],
-                    style: {
-                        '${symbolSelector}': {
-                            rect: [null, null, '110px', '110px']
-                        }
-                    }
-                },
-                timeline: {
-                    duration: 0,
-                    autoPlay: true,
-                    data: [
-
-                    ]
-                }
-            },
-            "btnR_3": {
-                version: "6.0.0",
-                minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
-                scaleToFit: "none",
-                centerStage: "none",
-                resizeInstances: false,
-                content: {
-                    dom: [
-                        {
-                            rect: ['0px', '0px', '110px', '110px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
-                            id: 'Ellipse',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'ellipse',
-                            fill: ['rgba(255,0,0,0.51)']
-                        }
-                    ],
-                    style: {
-                        '${symbolSelector}': {
-                            rect: [null, null, '110px', '110px']
-                        }
-                    }
-                },
-                timeline: {
-                    duration: 0,
-                    autoPlay: true,
-                    data: [
-
-                    ]
-                }
-            },
-            "btnR_4": {
-                version: "6.0.0",
-                minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
-                scaleToFit: "none",
-                centerStage: "none",
-                resizeInstances: false,
-                content: {
-                    dom: [
-                        {
-                            rect: ['0px', '0px', '110px', '110px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
-                            id: 'Ellipse',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'ellipse',
-                            fill: ['rgba(255,0,0,0.51)']
-                        }
-                    ],
-                    style: {
-                        '${symbolSelector}': {
-                            rect: [null, null, '110px', '110px']
-                        }
-                    }
-                },
-                timeline: {
-                    duration: 0,
-                    autoPlay: true,
-                    data: [
-
-                    ]
-                }
-            },
-            "btnR_5": {
-                version: "6.0.0",
-                minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
-                scaleToFit: "none",
-                centerStage: "none",
-                resizeInstances: false,
-                content: {
-                    dom: [
-                        {
-                            rect: ['0px', '0px', '110px', '110px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
-                            id: 'Ellipse',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'ellipse',
-                            fill: ['rgba(255,0,0,0.51)']
-                        }
-                    ],
-                    style: {
-                        '${symbolSelector}': {
-                            rect: [null, null, '110px', '110px']
-                        }
-                    }
-                },
-                timeline: {
-                    duration: 0,
-                    autoPlay: true,
-                    data: [
-
-                    ]
-                }
-            },
-            "btnR_6": {
-                version: "6.0.0",
-                minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
-                scaleToFit: "none",
-                centerStage: "none",
-                resizeInstances: false,
-                content: {
-                    dom: [
-                        {
-                            rect: ['31px', '22px', '131px', '131px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
-                            id: 'Ellipse',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'ellipse',
-                            fill: ['rgba(188,24,24,0.68)']
-                        }
-                    ],
-                    style: {
-                        '${symbolSelector}': {
-                            rect: [null, null, '157px', '157px']
-                        }
-                    }
-                },
-                timeline: {
-                    duration: 250,
-                    autoPlay: true,
-                    labels: {
-                        "a": 0,
-                        "b": 250
-                    },
-                    data: [
-
-                    ]
-                }
-            },
             "Tool_creditos": {
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
@@ -1326,9 +1140,9 @@
                     dom: [
                         {
                             rect: ['108px', '0px', '107px', '80px', 'auto', 'auto'],
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            id: 'Rectangle',
                             opacity: '0',
+                            id: 'Rectangle',
+                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             type: 'rect',
                             fill: ['rgba(255,255,255,0.29)']
                         },
@@ -1338,42 +1152,32 @@
                             id: 'RoundRect2',
                             opacity: '0',
                             rect: ['-32px', '14px', '124px', '53px', 'auto', 'auto'],
-                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.36)'],
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             fill: ['rgba(79,45,110,1.00)'],
+                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.36)'],
                             c: [
                             {
-                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto'],
-                                textStyle: ['', '', '', '', 'none'],
                                 font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
-                                id: 'TextCopy',
-                                text: '<p style=\"margin: 0px;\">​Créditos</p>',
+                                type: 'text',
                                 align: 'center',
-                                type: 'text'
+                                id: 'TextCopy',
+                                textStyle: ['', '', '', '', 'none'],
+                                text: '<p style=\"margin: 0px;\">​Créditos</p>',
+                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto']
                             },
                             {
+                                transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
                                 rect: ['115px', '19px', '15px', '15px', 'auto', 'auto'],
-                                transform: [[], ['45']],
                                 id: 'Rectangle3Copy',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(79,45,110,1)']
                             }]
-                        },
-                        {
-                            rect: ['107px', '0px', '108px', '80px', 'auto', 'auto'],
-                            textStyle: ['', '', '78px', '', 'none'],
-                            font: ['sena_icon', [68, 'px'], 'rgba(255,0,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
-                            id: 'TextCopy7',
-                            text: '<p style=\"margin: 0px;\">​​Q</p>',
-                            align: 'center',
-                            type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '215px', '80px']
+                            rect: [null, null, '215px', '80px']
                         }
                     }
                 },
@@ -1439,9 +1243,9 @@
                     dom: [
                         {
                             rect: ['108px', '0px', '107px', '80px', 'auto', 'auto'],
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            id: 'Rectangle',
                             opacity: '0',
+                            id: 'Rectangle',
+                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             type: 'rect',
                             fill: ['rgba(255,255,255,0.29)']
                         },
@@ -1451,42 +1255,32 @@
                             id: 'RoundRect2',
                             opacity: '0',
                             rect: ['0px', '14px', '92px', '53px', 'auto', 'auto'],
-                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.36)'],
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             fill: ['rgba(79,45,110,1.00)'],
+                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.36)'],
                             c: [
                             {
-                                rect: ['9px', '8px', 'auto', 'auto', 'auto', 'auto'],
-                                textStyle: ['', '', '', '', 'none'],
                                 font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
-                                id: 'TextCopy',
-                                text: '<p style=\"margin: 0px;\">​Ayuda</p>',
+                                type: 'text',
                                 align: 'center',
-                                type: 'text'
+                                id: 'TextCopy',
+                                textStyle: ['', '', '', '', 'none'],
+                                text: '<p style=\"margin: 0px;\">​Ayuda</p>',
+                                rect: ['9px', '8px', 'auto', 'auto', 'auto', 'auto']
                             },
                             {
+                                transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
                                 rect: ['83px', '19px', '15px', '15px', 'auto', 'auto'],
-                                transform: [[], ['45']],
                                 id: 'Rectangle3',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(79,45,110,1)']
                             }]
-                        },
-                        {
-                            rect: ['107px', '0px', '108px', '80px', 'auto', 'auto'],
-                            textStyle: ['', '', '77px', '', 'none'],
-                            font: ['sena_icon', [68, 'px'], 'rgba(255,0,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
-                            id: 'TextCopy5',
-                            text: '<p style=\"margin: 0px;\">​T</p>',
-                            align: 'center',
-                            type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '215px', '80px']
+                            rect: [null, null, '215px', '80px']
                         }
                     }
                 },
@@ -1552,9 +1346,9 @@
                     dom: [
                         {
                             rect: ['108px', '0px', '107px', '80px', 'auto', 'auto'],
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            id: 'Rectangle',
                             opacity: '0',
+                            id: 'Rectangle',
+                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             type: 'rect',
                             fill: ['rgba(255,255,255,0.29)']
                         },
@@ -1564,42 +1358,32 @@
                             id: 'RoundRect2',
                             opacity: '0',
                             rect: ['-146px', '14px', '238px', '53px', 'auto', 'auto'],
-                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.36)'],
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             fill: ['rgba(79,45,110,1.00)'],
+                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.36)'],
                             c: [
                             {
-                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto'],
-                                textStyle: ['', '', '', '', 'none'],
                                 font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
-                                id: 'TextCopy',
-                                text: '<p style=\"margin: 0px;\">​Pantalla completa</p>',
+                                type: 'text',
                                 align: 'center',
-                                type: 'text'
+                                id: 'TextCopy',
+                                textStyle: ['', '', '', '', 'none'],
+                                text: '<p style=\"margin: 0px;\">​Pantalla completa</p>',
+                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto']
                             },
                             {
+                                transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
                                 rect: ['229px', '19px', '15px', '15px', 'auto', 'auto'],
-                                transform: [[], ['45']],
                                 id: 'Rectangle3Copy',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(79,45,110,1)']
                             }]
-                        },
-                        {
-                            rect: ['107px', '-1px', '108px', '81px', 'auto', 'auto'],
-                            textStyle: ['', '', '69px', '', 'none'],
-                            font: ['sena_icon', [68, 'px'], 'rgba(255,0,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
-                            id: 'TextCopy4',
-                            text: '<p style=\"margin: 0px;\">​​P</p>',
-                            align: 'center',
-                            type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '215px', '80px']
+                            rect: [null, null, '215px', '80px']
                         }
                     }
                 },
@@ -1665,9 +1449,9 @@
                     dom: [
                         {
                             rect: ['108px', '0px', '107px', '80px', 'auto', 'auto'],
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            id: 'Rectangle',
                             opacity: '0',
+                            id: 'Rectangle',
+                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             type: 'rect',
                             fill: ['rgba(255,255,255,0.29)']
                         },
@@ -1677,42 +1461,32 @@
                             id: 'RoundRect2',
                             opacity: '0',
                             rect: ['-74px', '14px', '166px', '53px', 'auto', 'auto'],
-                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.36)'],
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             fill: ['rgba(79,45,110,1.00)'],
+                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.36)'],
                             c: [
                             {
+                                transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
                                 rect: ['157px', '19px', '15px', '15px', 'auto', 'auto'],
-                                transform: [[], ['45']],
                                 id: 'Rectangle3Copy',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
-                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto'],
-                                textStyle: ['', '', '', '', 'none'],
                                 font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
-                                id: 'TextCopy',
-                                text: '<p style=\"margin: 0px;\">​Información</p>',
+                                type: 'text',
                                 align: 'center',
-                                type: 'text'
+                                id: 'TextCopy',
+                                textStyle: ['', '', '', '', 'none'],
+                                text: '<p style=\"margin: 0px;\">​Información</p>',
+                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto']
                             }]
-                        },
-                        {
-                            rect: ['107px', '-2px', '108px', '81px', 'auto', 'auto'],
-                            textStyle: ['', '', '87px', '', 'none'],
-                            font: ['sena_icon', [68, 'px'], 'rgba(255,0,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
-                            id: 'TextCopy3',
-                            text: '<p style=\"margin: 0px;\">​​U</p>',
-                            align: 'center',
-                            type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '215px', '80px']
+                            rect: [null, null, '215px', '80px']
                         }
                     }
                 },
@@ -1777,11 +1551,11 @@
                 content: {
                     dom: [
                         {
-                            rect: ['108px', '0px', '107px', '80px', 'auto', 'auto'],
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             type: 'rect',
-                            id: 'Rectangle',
+                            rect: ['108px', '0px', '107px', '80px', 'auto', 'auto'],
                             opacity: '0',
+                            id: 'Rectangle',
+                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             clip: 'rect(0px 107px 80px 0px)',
                             fill: ['rgba(255,255,255,0.29)']
                         },
@@ -1791,43 +1565,34 @@
                             id: 'RoundRect2',
                             opacity: '0',
                             rect: ['-86px', '14px', '178px', '53px', 'auto', 'auto'],
-                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.36)'],
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            clip: 'rect(0px 178px 53px 0px)',
+                            overflow: 'visible',
                             fill: ['rgba(79,45,110,1.00)'],
+                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
+                            clip: 'rect(-5.26318359375px 191.4501953125px 59.4326171875px 0px)',
+                            boxShadow: ['', 3, 3, 6, 0, 'rgba(0,0,0,0.36)'],
                             c: [
                             {
+                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
+                                type: 'text',
+                                align: 'center',
+                                id: 'TextCopy',
+                                textStyle: ['', '', '', '', 'none'],
+                                text: '<p style=\"margin: 0px;\">​Accesibilidad</p>',
+                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto']
+                            },
+                            {
+                                transform: [[], ['45'], [0, 0, 0], [1, 1, 1]],
                                 rect: ['169px', '19px', '15px', '15px', 'auto', 'auto'],
-                                transform: [[], ['45']],
                                 id: 'Rectangle3Copy',
                                 stroke: [0, 'rgb(0, 0, 0)', 'none'],
                                 type: 'rect',
                                 fill: ['rgba(79,45,110,1)']
-                            },
-                            {
-                                rect: ['12px', '8px', 'auto', 'auto', 'auto', 'auto'],
-                                textStyle: ['', '', '', '', 'none'],
-                                font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
-                                id: 'TextCopy',
-                                text: '<p style=\"margin: 0px;\">​Accesibilidad</p>',
-                                align: 'center',
-                                type: 'text'
                             }]
-                        },
-                        {
-                            rect: ['107px', '-1px', '108px', '81px', 'auto', 'auto'],
-                            textStyle: ['', '', '87px', '', 'none'],
-                            font: ['sena_icon', [68, 'px'], 'rgba(255,0,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
-                            id: 'TextCopy2',
-                            text: '<p style=\"margin: 0px;\">​​R</p>',
-                            align: 'center',
-                            type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '215px', '80px']
+                            rect: [null, null, '215px', '80px']
                         }
                     }
                 },
@@ -1892,11 +1657,13 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            id: 'RectangleCopy',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '108px', '80px', 'auto', 'auto'],
-                            fill: ['rgba(255,0,0,0.00)']
+                            font: ['sena_icon', [70, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
+                            type: 'text',
+                            align: 'center',
+                            id: 'Text',
+                            textStyle: ['', '', '87px', '', ''],
+                            text: '<p style=\"margin: 0px;\">​P</p>',
+                            rect: ['0px', '0px', '108px', '80px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -1923,11 +1690,13 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            id: 'RectangleCopy',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '108px', '80px', 'auto', 'auto'],
-                            fill: ['rgba(255,0,0,0.00)']
+                            font: ['sena_icon', [70, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
+                            type: 'text',
+                            align: 'center',
+                            id: 'Text3',
+                            textStyle: ['', '', '87px', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​T</p>',
+                            rect: ['0px', '0px', '108px', '80px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -1954,11 +1723,13 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            id: 'RectangleCopy',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '108px', '80px', 'auto', 'auto'],
-                            fill: ['rgba(255,0,0,0.00)']
+                            font: ['sena_icon', [70, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
+                            type: 'text',
+                            align: 'center',
+                            id: 'Text2',
+                            textStyle: ['', '', '87px', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​Q</p>',
+                            rect: ['0px', '0', '108px', '80px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -1985,11 +1756,13 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            id: 'RectangleCopy',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '108px', '80px', 'auto', 'auto'],
-                            fill: ['rgba(255,0,0,0.00)']
+                            font: ['sena_icon', [70, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
+                            type: 'text',
+                            align: 'center',
+                            id: 'Text5',
+                            textStyle: ['', '', '87px', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​U</p>',
+                            rect: ['0px', '0px', '108px', '80px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -2016,11 +1789,13 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            id: 'RectangleCopy',
-                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '108px', '80px', 'auto', 'auto'],
-                            fill: ['rgba(255,0,0,0.00)']
+                            font: ['sena_icon', [70, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
+                            type: 'text',
+                            align: 'center',
+                            id: 'Text6',
+                            textStyle: ['', '', '87px', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​R</p>',
+                            rect: ['0px', '0px', '108px', '80px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -2065,13 +1840,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
+                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
                                 type: 'text',
-                                rect: ['14px', '9px', 'auto', 'auto', 'auto', 'auto'],
                                 text: '<p style=\"margin: 0px;\">​Punto de</p><p style=\"margin: 0px;\">​aprendizaje</p>',
                                 id: 'Text',
                                 textStyle: ['', '', '24px', '', ''],
                                 align: 'center',
-                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap']
+                                rect: ['14px', '9px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -2160,13 +1935,13 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
+                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
                                 type: 'text',
-                                rect: ['12px', '9px', 'auto', 'auto', 'auto', 'auto'],
                                 text: '<p style=\"margin: 0px;\">Vocabulario</p>',
                                 id: 'TextCopy',
                                 textStyle: ['', '', '24px', '', ''],
                                 align: 'center',
-                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap']
+                                rect: ['12px', '9px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -2255,12 +2030,12 @@
                                 fill: ['rgba(79,45,110,1)']
                             },
                             {
+                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap'],
                                 type: 'text',
-                                rect: ['9px', '13px', 'auto', 'auto', 'auto', 'auto'],
                                 id: 'Text',
                                 text: '<p style=\"margin: 0px;\">​Aprendamos</p><p style=\"margin: 0px;\">​en papel</p>',
                                 align: 'center',
-                                font: ['source-sans-pro, sans-serif', [22, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', '', 'break-word', 'nowrap']
+                                rect: ['9px', '13px', 'auto', 'auto', 'auto', 'auto']
                             }]
                         }
                     ],
@@ -2331,10 +2106,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1920px', '1080px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '1920px', '1080px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0.4706)']
                         }
                     ],
@@ -2444,10 +2219,10 @@
                             fill: ['rgba(255,255,255,0.40)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['0px', '0', '1838', '785', 'auto', 'auto'],
                             id: 'back_container',
                             symbolName: 'back_container',
-                            rect: ['0px', '0', '1838', '785', 'auto', 'auto']
+                            type: 'rect'
                         }
                     ],
                     style: {
@@ -2508,33 +2283,12 @@
                             id: 'RoundRect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
-                            fill: ['rgba(0,0,0,0.47)'],
-                            c: [
-                            {
-                                rect: ['0px', '0px', '106px', '579px', 'auto', 'auto'],
-                                textStyle: ['', '', '97px', '', 'none'],
-                                font: ['sena_icon', [68, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
-                                id: 'Text',
-                                text: '<p style=\"margin: 0px;\">​P</p><p style=\"margin: 0px;\">​Q</p><p style=\"margin: 0px;\">​T</p><p style=\"margin: 0px;\">​S</p><p style=\"margin: 0px;\">​U</p><p style=\"margin: 0px;\">​R</p>',
-                                align: 'center',
-                                type: 'text'
-                            }]
-                        },
-                        {
-                            transform: [[], ['50']],
-                            rect: ['48px', '305px', '6px', '72px', 'auto', 'auto'],
-                            borderRadius: ['3px', '3px', '3px', '3px 3px'],
-                            type: 'rect',
-                            id: 'Rectangle',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            display: 'none',
-                            fill: ['rgba(255,255,255,1.00)']
+                            fill: ['rgba(0,0,0,0.47)']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '107px', '580px']
+                            rect: [null, null, '107px', '580px']
                         }
                     }
                 },
@@ -2546,16 +2300,7 @@
                         "audio": 250
                     },
                     data: [
-                        [
-                            "eid436",
-                            "display",
-                            250,
-                            0,
-                            "linear",
-                            "${Rectangle}",
-                            'none',
-                            'block'
-                        ]
+
                     ]
                 }
             },
@@ -2571,33 +2316,19 @@
                         {
                             type: 'image',
                             id: 'BTN-tools-ES',
-                            rect: ['0px', '0px', '107px', '101px', 'auto', 'auto'],
+                            rect: ['0px', '0px', '109px', '101px', 'auto', 'auto'],
                             cursor: 'pointer',
                             fill: ['rgba(0,0,0,0)', 'images/BTN-tools-ES.png', '0px', '0px']
                         },
                         {
-                            rect: ['23px', '44px', '18px', '18px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
-                            id: 'Ellipse',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'ellipse',
-                            fill: ['rgba(255,182,0,1.00)']
-                        },
-                        {
-                            rect: ['46px', '44px', '18px', '18px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
-                            id: 'EllipseCopy',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'ellipse',
-                            fill: ['rgba(255,182,0,1.00)']
-                        },
-                        {
-                            rect: ['68px', '44px', '18px', '18px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
-                            id: 'EllipseCopy2',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'ellipse',
-                            fill: ['rgba(255,182,0,1.00)']
+                            type: 'text',
+                            align: 'center',
+                            textStyle: ['', '', '107px', '', ''],
+                            rect: ['0px', '0px', '107px', '101px', 'auto', 'auto'],
+                            font: ['sena_icon', [68, 'px'], 'rgba(255,182,0,1.00)', 'normal', 'none', '', 'break-word', ''],
+                            id: 'Text',
+                            textShadow: ['rgba(0,0,0,0.65098)', 2, 1, 2],
+                            text: '<p style=\"margin: 0px;\">​W</p>'
                         }
                     ],
                     style: {
@@ -2628,8 +2359,8 @@
                             type: 'text',
                             align: 'left',
                             id: 'Titulo',
-                            text: '<p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 600; font-style: normal; text-decoration: none; font-size: 40px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: left; text-indent: 0px; line-height: normal;\">&nbsp;<span style=\"font-size: 41px;\">Empecemos</span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: bold; font-style: normal; text-decoration: none; font-size: 40px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">&nbsp;&nbsp;</span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 500; font-style: normal; text-decoration: none; font-size: 35px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">las letras</span></p>',
                             textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 600; font-style: normal; text-decoration: none; font-size: 40px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: left; text-indent: 0px; line-height: normal;\">&nbsp;<span style=\"font-size: 41px;\">Empecemos</span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: bold; font-style: normal; text-decoration: none; font-size: 40px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">&nbsp;&nbsp;</span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 500; font-style: normal; text-decoration: none; font-size: 35px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px;\">las letras</span></p>',
                             rect: ['0px', '0px', '649px', '50px', 'auto', 'auto']
                         }
                     ],
@@ -2665,26 +2396,25 @@
                             fill: ['rgba(204,204,204,1.00)']
                         },
                         {
-                            rect: ['-55px', '-55px', '200px', '200px', 'auto', 'auto'],
-                            id: 'btn_puntoaprendizajeCopy',
                             transform: [[], [], [], ['0.4', '0.4']],
+                            id: 'btn_puntoaprendizajeCopy',
                             type: 'image',
+                            rect: ['-55px', '-55px', '200px', '200px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/btn_puntoaprendizaje.png', '0px', '0px']
                         },
                         {
-                            rect: ['0px', '0px', '90px', '90px', 'auto', 'auto'],
-                            textStyle: ['', '', '89px', '', 'none'],
                             font: ['sena_icon', [65, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
+                            type: 'text',
+                            align: 'center',
                             id: 'Text9',
                             text: '<p style=\"margin: 0px;\">​I</p>',
-                            align: 'center',
-                            type: 'text'
+                            textStyle: ['', '', '89px', '', 'none'],
+                            rect: ['0px', '0px', '90px', '90px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '90px', '90px']
+                            rect: [null, null, '90px', '90px']
                         }
                     }
                 },
@@ -2714,27 +2444,26 @@
                             fill: ['rgba(204,204,204,1.00)']
                         },
                         {
-                            rect: ['-55px', '-55px', '200px', '200px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.4', '0.4']],
+                            rect: ['-55px', '-55px', '200px', '200px', 'auto', 'auto'],
                             id: 'btn_vocabularioCopy',
                             opacity: '1',
                             type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/btn_vocabulario.png', '0px', '0px']
                         },
                         {
-                            rect: ['0px', '0px', '90px', '94px', 'auto', 'auto'],
-                            textStyle: ['', '', '93px', '', 'none'],
                             font: ['sena_icon', [79, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
+                            type: 'text',
+                            align: 'center',
                             id: 'Text10',
                             text: '<p style=\"margin: 0px;\">​J</p>',
-                            align: 'center',
-                            type: 'text'
+                            textStyle: ['', '', '93px', '', 'none'],
+                            rect: ['0px', '0px', '90px', '94px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '90px', '90px']
+                            rect: [null, null, '90px', '90px']
                         }
                     }
                 },
@@ -2756,34 +2485,33 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '130px', '130px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            type: 'ellipse',
                             id: 'borde',
                             stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
-                            type: 'ellipse',
+                            rect: ['0px', '0px', '130px', '130px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
                             fill: ['rgba(204,204,204,1.00)'],
                             c: [
                             {
-                                id: 'evaluacion_btn',
                                 type: 'image',
+                                id: 'evaluacion_btn',
                                 rect: ['5px', '5px', '120px', '120px', 'auto', 'auto'],
                                 fill: ['rgba(0,0,0,0)', 'images/evaluacion_btn.png', '0px', '0px']
                             },
                             {
+                                type: 'text',
                                 rect: ['-1px', '-1px', '130px', '130px', 'auto', 'auto'],
                                 textStyle: ['', '', '131px', '', 'none'],
-                                font: ['sena_icon', [100, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
                                 id: 'Text7',
                                 text: '<p style=\"margin: 0px;\">​H</p>',
                                 align: 'center',
-                                type: 'text'
+                                font: ['sena_icon', [100, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', '']
                             }]
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '130px', '130px']
+                            rect: [null, null, '130px', '130px']
                         }
                     }
                 },
@@ -2858,34 +2586,33 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '130px', '130px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            type: 'ellipse',
                             id: 'borde',
                             stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
-                            type: 'ellipse',
+                            rect: ['0px', '0px', '130px', '130px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
                             fill: ['rgba(204,204,204,1.00)'],
                             c: [
                             {
-                                id: 'r5_btn',
                                 type: 'image',
+                                id: 'r5_btn',
                                 rect: ['5px', '5px', '120px', '120px', 'auto', 'auto'],
                                 fill: ['rgba(0,0,0,0)', 'images/r5_btn.png', '0px', '0px']
                             },
                             {
+                                type: 'text',
                                 rect: ['-1px', '-1px', '129px', '137px', 'auto', 'auto'],
                                 textStyle: ['', '', '137px', '', 'none'],
-                                font: ['sena_icon', [90, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
                                 id: 'Text6',
                                 text: '<p style=\"margin: 0px;\">​F</p>',
                                 align: 'center',
-                                type: 'text'
+                                font: ['sena_icon', [90, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', '']
                             }]
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '130px', '130px']
+                            rect: [null, null, '130px', '130px']
                         }
                     }
                 },
@@ -2960,34 +2687,33 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '110px', '110px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            type: 'ellipse',
                             id: 'borde',
                             stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
-                            type: 'ellipse',
+                            rect: ['0px', '0px', '110px', '110px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
                             fill: ['rgba(204,204,204,1.00)'],
                             c: [
                             {
-                                id: 'r4_btn',
                                 type: 'image',
+                                id: 'r4_btn',
                                 rect: ['5px', '5px', '100px', '100px', 'auto', 'auto'],
                                 fill: ['rgba(0,0,0,0)', 'images/r4_btn.png', '0px', '0px']
                             },
                             {
+                                type: 'text',
                                 rect: ['-1px', '-1px', '111px', '113px', 'auto', 'auto'],
                                 textStyle: ['', '', '114px', '', 'none'],
-                                font: ['sena_icon', [75, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
                                 id: 'Text5',
                                 text: '<p style=\"margin: 0px;\">​E</p>',
                                 align: 'center',
-                                type: 'text'
+                                font: ['sena_icon', [75, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', '']
                             }]
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '110px', '110px']
+                            rect: [null, null, '110px', '110px']
                         }
                     }
                 },
@@ -3062,34 +2788,33 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '100px', '100px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            type: 'ellipse',
                             id: 'borde',
                             stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
-                            type: 'ellipse',
+                            rect: ['0px', '0px', '100px', '100px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
                             fill: ['rgba(204,204,204,1.00)'],
                             c: [
                             {
-                                id: 'r3_btn',
                                 type: 'image',
+                                id: 'r3_btn',
                                 rect: ['5px', '5px', '90px', '90px', 'auto', 'auto'],
                                 fill: ['rgba(0,0,0,0)', 'images/r3_btn.png', '0px', '0px']
                             },
                             {
+                                type: 'text',
                                 rect: ['-1px', '-1px', '100px', '103px', 'auto', 'auto'],
                                 textStyle: ['', '', '100px', '', 'none'],
-                                font: ['sena_icon', [72, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
                                 id: 'Text4',
                                 text: '<p style=\"margin: 0px;\">​D</p>',
                                 align: 'center',
-                                type: 'text'
+                                font: ['sena_icon', [72, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', '']
                             }]
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '100px', '100px']
+                            rect: [null, null, '100px', '100px']
                         }
                     }
                 },
@@ -3164,34 +2889,33 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '110px', '110px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            type: 'ellipse',
                             id: 'borde',
                             stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
-                            type: 'ellipse',
+                            rect: ['0px', '0px', '110px', '110px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
                             fill: ['rgba(204,204,204,1.00)'],
                             c: [
                             {
-                                id: 'exploremos_btn',
                                 type: 'image',
+                                id: 'exploremos_btn',
                                 rect: ['5px', '5px', '100px', '100px', 'auto', 'auto'],
                                 fill: ['rgba(0,0,0,0)', 'images/exploremos_btn.png', '0px', '0px']
                             },
                             {
+                                type: 'text',
                                 rect: ['-1px', '-1px', '110px', '112px', 'auto', 'auto'],
                                 textStyle: ['', '', '112px', '', 'none'],
-                                font: ['sena_icon', [80, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
                                 id: 'Text3',
                                 text: '<p style=\"margin: 0px;\">​C</p>',
                                 align: 'center',
-                                type: 'text'
+                                font: ['sena_icon', [80, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', '']
                             }]
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '110px', '110px']
+                            rect: [null, null, '110px', '110px']
                         }
                     }
                 },
@@ -3266,34 +2990,33 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '130px', '130px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            type: 'ellipse',
                             id: 'borde',
                             stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
-                            type: 'ellipse',
+                            rect: ['0px', '0px', '130px', '130px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
                             fill: ['rgba(204,204,204,1.00)'],
                             c: [
                             {
+                                rect: ['5px', '5px', '120px', '120px', 'auto', 'auto'],
                                 id: 'empecemos_btn',
                                 type: 'image',
-                                rect: ['5px', '5px', '120px', '120px', 'auto', 'auto'],
                                 fill: ['rgba(0,0,0,0)', 'images/empecemos_btn.png', '0px', '0px']
                             },
                             {
-                                rect: ['-1px', '-1px', '130px', '133px', 'auto', 'auto'],
-                                textStyle: ['', '', '132px', '', 'none'],
                                 font: ['sena_icon', [100, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
-                                id: 'Text2',
-                                text: '<p style=\"margin: 0px;\">​B</p>',
+                                type: 'text',
                                 align: 'center',
-                                type: 'text'
+                                id: 'Text2',
+                                textStyle: ['', '', '132px', '', 'none'],
+                                text: '<p style=\"margin: 0px;\">​B</p>',
+                                rect: ['-1px', '-1px', '130px', '133px', 'auto', 'auto']
                             }]
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '130px', '130px']
+                            rect: [null, null, '130px', '130px']
                         }
                     }
                 },
@@ -3324,16 +3047,6 @@
                             "${borde}",
                             '1.1',
                             '1'
-                        ],
-                        [
-                            "eid411",
-                            "border-color",
-                            0,
-                            0,
-                            "linear",
-                            "${borde}",
-                            'rgba(204,204,204,1.00)',
-                            'rgba(204,204,204,1.00)'
                         ],
                         [
                             "eid327",
@@ -3368,34 +3081,33 @@
                 content: {
                     dom: [
                         {
-                            rect: ['12px', '12px', '84px', '84px', 'auto', 'auto'],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            type: 'ellipse',
                             id: 'borde',
                             stroke: [1, 'rgba(204,204,204,1.00)', 'solid'],
-                            type: 'ellipse',
+                            rect: ['12px', '12px', '84px', '84px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
                             fill: ['rgba(205,205,205,1.00)'],
                             c: [
                             {
-                                id: 'pdf_btn2Copy',
                                 type: 'image',
+                                id: 'pdf_btn2Copy',
                                 rect: ['4px', '4px', '76px', '76px', 'auto', 'auto'],
                                 fill: ['rgba(0,0,0,0)', 'images/pdf_btn2.png', '0px', '0px']
                             },
                             {
+                                type: 'text',
                                 rect: ['-13px', '-13px', '110px', '110px', 'auto', 'auto'],
                                 textStyle: ['', '', '110px', '', 'none'],
-                                font: ['sena_icon', [60, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', ''],
                                 id: 'Text8',
                                 text: '<p style=\"margin: 0px;\">​G</p>',
                                 align: 'center',
-                                type: 'text'
+                                font: ['sena_icon', [60, 'px'], 'rgba(255,182,0,0.00)', '400', 'none', 'normal', 'break-word', '']
                             }]
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '110px', '110px']
+                            rect: [null, null, '110px', '110px']
                         }
                     }
                 },
@@ -3470,11 +3182,11 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'logo_sena',
-                            tag: 'img',
                             rect: ['0px', '0px', '239px', '173px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/logo_sena.png', '0px', '0px']
+                            id: 'logo_sena',
+                            fill: ['rgba(0,0,0,0)', 'images/logo_sena.png', '0px', '0px'],
+                            type: 'image',
+                            tag: 'img'
                         }
                     ],
                     style: {
@@ -3501,18 +3213,19 @@
                 content: {
                     dom: [
                         {
-                            font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,182,0,1.00)', '500', 'none', 'normal', 'break-word', 'normal'],
-                            type: 'text',
-                            align: 'right',
-                            id: 'Ruta',
+                            rect: ['0px', '0px', '632px', '41px', 'auto', 'auto'],
                             textStyle: ['', '', '', '', 'none'],
+                            font: ['source-sans-pro, sans-serif', [28, 'px'], 'rgba(255,182,0,1.00)', '500', 'none', 'normal', 'break-word', 'normal'],
+                            id: 'texto_ruta',
                             text: '<p style=\"margin: 0px;\">​Español &gt; Pre A1 Introductorio &gt; Mi contexto</p>',
-                            rect: ['0px', '0px', '632px', '41px', 'auto', 'auto']
+                            align: 'right',
+                            type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '632px', '41px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '632px', '41px']
                         }
                     }
                 },
@@ -3534,10 +3247,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '1838px', '785px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '0px', '1838px', '785px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(230,253,200,1.00)']
                         }
                     ],
@@ -3598,9 +3311,9 @@
                     dom: [
                         {
                             rect: ['0px', '0px', '1924px', '946px', 'auto', 'auto'],
-                            opacity: '0.9',
-                            id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            id: 'Rectangle',
+                            opacity: '0.9',
                             type: 'rect',
                             fill: ['rgba(192,192,192,1)']
                         }
@@ -3608,6 +3321,47 @@
                     style: {
                         '${symbolSelector}': {
                             rect: [null, null, '1924px', '946px']
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: true,
+                    data: [
+
+                    ]
+                }
+            },
+            "nivel": {
+                version: "6.0.0",
+                minimumCompatibleVersion: "5.0.0",
+                build: "6.0.0.400",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            type: 'rect',
+                            borderRadius: ['0px', '0px', '18px', '18px 18px'],
+                            id: 'nivel',
+                            stroke: [1, 'rgb(204, 204, 204)', 'none'],
+                            rect: ['0px', '24px', '1881px', '18px', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            fill: ['rgba(0,165,61,0.00)'],
+                            c: [
+                            {
+                                type: 'rect',
+                                id: 'Rectangle',
+                                stroke: [73, 'rgba(0,165,61,1.00)', 'solid'],
+                                rect: ['-15px', '-8px', '1758px', '64px', 'auto', 'auto'],
+                                fill: ['rgba(0,165,61,0.00)']
+                            }]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, '1881px', '42px']
                         }
                     }
                 },

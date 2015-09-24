@@ -497,6 +497,18 @@
     //Edge symbol: 'btn_audio'
     (function (symbolName) {
 
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
     })("btn_audio");
    //Edge symbol end:'btn_audio'
 
@@ -619,66 +631,6 @@
 
     })("rec_1");
    //Edge symbol end:'rec_1'
-
-    //=========================================================
-
-    //Edge symbol: 'btnR_1'
-    (function (symbolName) {
-
-    })("btnR_1");
-   //Edge symbol end:'btnR_1'
-
-    //=========================================================
-
-    //Edge symbol: 'btnR_2'
-    (function (symbolName) {
-
-    })("btnR_2");
-   //Edge symbol end:'btnR_2'
-
-    //=========================================================
-
-    //Edge symbol: 'btnR_3'
-    (function (symbolName) {
-
-    })("btnR_3");
-   //Edge symbol end:'btnR_3'
-
-    //=========================================================
-
-    //Edge symbol: 'btnR_4'
-    (function (symbolName) {
-
-    })("btnR_4");
-   //Edge symbol end:'btnR_4'
-
-    //=========================================================
-
-    //Edge symbol: 'btnR_5'
-    (function (symbolName) {
-
-    })("btnR_5");
-   //Edge symbol end:'btnR_5'
-
-    //=========================================================
-
-    //Edge symbol: 'btnR_6'
-    (function (symbolName) {
-
-        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function (sym, e) {
-            sym.stop();
-
-        });
-        //Edge binding end
-
-        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function (sym, e) {
-            sym.stop();
-
-        });
-        //Edge binding end
-
-    })("btnR_6");
-   //Edge symbol end:'btnR_6'
 
     //=========================================================
 
@@ -1143,5 +1095,13 @@
    
    })("contenedor_portada");
    //Edge symbol end:'contenedor_portada'
+
+   //=========================================================
+   
+   //Edge symbol: 'nivel'
+   (function(symbolName) {   
+   
+   })("nivel");
+   //Edge symbol end:'nivel'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-7659645");

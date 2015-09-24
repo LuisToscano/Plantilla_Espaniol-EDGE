@@ -3,26 +3,7 @@
 
 	"HTMLFileName":"correcto.html",
 	"expanded:images/cerrar.png":"nil",
-	"ModelData":"{\
-\"stage\": {\
-   \"timelines\": {\
-      \"Default Timeline\": {\
-      }\
-   }},\
-\"cerrar_corr\": {\
-   \"timelines\": {\
-      \"Default Timeline\": {\
-      }\
-   }},\
-\"Precargador\": {\
-   \"timelines\": {\
-\
-   }},\
-\"Nivel inferior\": {\
-   \"timelines\": {\
-\
-   }}\
-}",
+	"expanded:images/correcto.png":"nil",
 	"symbol_cerrar_corr":{
 		"element_${cerrar}":{
 			"timelineColor2":"0x168c84",
@@ -33,17 +14,17 @@
 			"timelineColor3":"0x4a485e",
 			"timelineColor":"0x63599f"}},
 	"symbol_Precargador":{
-		"defaultStageParentHeight":"400px",
+		"dummyStageParentWidth":"400px",
 		"dummyStageParentHeight":"400px",
 		"defaultStageParentWidth":"400px",
 		"element_${preloader4}":{
 			"timelineColor2":"0x107faa",
 			"timelineColor3":"0x295a6d",
 			"timelineColor":"0x008dc8"},
-		"dummyStageParentWidth":"400px"},
+		"defaultStageParentHeight":"400px"},
 	"expanded:images/preloader4.gif":"nil",
 	"pref__general__FilterNonAnimatedElements":"false",
-	"pref__general__AutoKeyframePropertiesArmed":"true",
+	"pref__general__AutoKeyframePropertiesArmed":"false",
 	"symbol_stage":{
 		"element_${Text}":{
 			"timelineColor2":"0x1aa38f",
@@ -79,10 +60,30 @@
 	"CompZoomFactor":"100",
 	"StageZoomFactor":"37",
 	"pixelsPerMs":"0.2",
-	"cerrar_corr-Default Timeline_playhead_ms":"0",
 	"usedBOM":"false",
+	"Precargador-Default Timeline_playhead_ms":"0",
+	"cerrar_corr-Default Timeline_playhead_ms":"0",
 	"nextElementColorIndex":"10",
 	"stage-Default Timeline_playhead_ms":"0",
 	"viewStartY":"0",
-	"Precargador-Default Timeline_playhead_ms":"0",
-	"expanded:images/correcto.png":"nil"}
+	"mediagroup_media/attempt-success.mp3":"attempt-success",
+	"ModelData":"{\
+\"stage\": {\
+   \"timelines\": {\
+      \"Default Timeline\": {\
+      }\
+   }},\
+\"cerrar_corr\": {\
+   \"timelines\": {\
+      \"Default Timeline\": {\
+      }\
+   }},\
+\"Precargador\": {\
+   \"timelines\": {\
+\
+   }},\
+\"Nivel inferior\": {\
+   \"timelines\": {\
+\
+   }}\
+}"}

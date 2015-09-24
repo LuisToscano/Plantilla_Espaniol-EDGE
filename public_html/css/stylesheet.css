@@ -1,0 +1,24 @@
+@font-face{
+    font-family:'sena_icon';
+    src:url('../font/sena.eot');
+    src:url('../font/sena.eot?#iefix') format('embedded-opentype'),
+        url('../font/sena.woff') format('woff'),
+        url('../font/sena.ttf') format('truetype'),
+        url('../font/sena.svg#glyphicons_halflingsregular') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}

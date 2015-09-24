@@ -1,25 +1,22 @@
 {
     "num_intentos": 2,
-    "pregunta":"Escuche el audio y arrastre la letra que falta para completar la palabra.",
-    "tipo": "uno a uno",
-    "drags": {
+    "pregunta":"escuche el audio y seleccione la respuesta que corresponda, tiene distractores.",
+    "picks": {
         "1": {
-            "descripcion": "a"
+            "descripcion": "p, r, s",
+            "esRespuesta": false
         },
         "2": {
-            "descripcion": "o"
+            "descripcion": "d, r, s",
+            "esRespuesta": false
         },
-         "3": {
-            "descripcion": "e"
+        "3": {
+            "descripcion": "p, d, s",
+            "esRespuesta": true
         },
-         "4": {
-            "descripcion": "i"
-        }        
-    },
-    "drops": {
-        "1": {
-            "descripcion": "cuadro",
-            "accepted": ["1"]
+        "4": {
+            "descripcion": "d, d, r, s",
+            "esRespuesta": false
         }        
     }
 }

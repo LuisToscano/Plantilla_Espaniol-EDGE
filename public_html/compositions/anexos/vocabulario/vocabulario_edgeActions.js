@@ -24,6 +24,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       });
       //Edge binding end
+	  
+	  Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function (sym, e) {
+            // Insertar código para ejecutarse cuando el símbolo se crea aquí
+            $(".center-wrapper").css({overflow: "hidden"});
+
+        });
+        //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${audio_1}", "click", function(sym, e) {
          var numeroAudio = 1;
@@ -90,7 +97,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    //Edge symbol: 'audio_1'
    (function(symbolName) {   
    
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1832, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1750, function(sym, e) {
          sym.play("stop");
 
       });
@@ -120,7 +127,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2072, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1958, function(sym, e) {
          sym.play("stop");
 
       });
@@ -142,7 +149,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1500, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1750, function(sym, e) {
          sym.play("stop");
 
       });
@@ -186,7 +193,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1408, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2010, function(sym, e) {
          sym.play("stop");
 
       });
@@ -208,7 +215,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1500, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1250, function(sym, e) {
          sym.play("stop");
 
       });

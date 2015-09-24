@@ -8,7 +8,8 @@
         vid='media/',
         js='js/',
         fonts = {
-            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>'        },
+            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>',
+            'scroll_bar': '<link rel=\"stylesheet\" href=\"css/scrollbar.css\" type=\"text/css\" media=\"screen\" title=\"\" charset=\"utf-8\" />'        },
         opts = {
             'gAudioPreloadPreference': 'auto',
             'gVideoPreloadPreference': 'auto'
@@ -16,6 +17,8 @@
         resources = [
         ],
         scripts = [
+            js+"jquery-1.11.3.min.js",
+            js+"zoomUtilities.js"
         ],
         symbols = {
             "stage": {
@@ -40,13 +43,13 @@
                             id: 'tiempo',
                             type: 'image',
                             tag: 'img',
-                            rect: ['885px', '248px', '150px', '150px', 'auto', 'auto'],
+                            rect: ['885px', '221px', '150px', '150px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"tiempo.png",'0px','0px']
                         },
                         {
-                            id: 'Text',
+                            id: 'texto_1',
                             type: 'text',
-                            rect: ['798px', '433px', '324px', '77px', 'auto', 'auto'],
+                            rect: ['780px', '386px', '360px', '77px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">​¡Se acabó el tiempo! Vuelve a intentarlo.</p><p style=\"margin: 0px;\"></p>",
                             align: "center",
                             font: ['source-sans-pro, sans-serif', [32, "px"], "rgba(0,0,0,1)", "600", "none", "", "break-word", ""],
@@ -106,10 +109,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
-                            id: 'cerrar',
-                            transform: [[], [], [], ['0.35', '0.35']],
                             type: 'image',
+                            id: 'cerrar',
+                            rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.35', '0.35']],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
@@ -145,17 +148,16 @@
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
-                            id: 'cerrar',
-                            transform: [[], [], [], ['0.35', '0.35']],
                             type: 'image',
+                            id: 'cerrar',
+                            rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.35', '0.35']],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar2.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '53px', '54px']
+                            rect: [null, null, '53px', '54px']
                         }
                     }
                 },

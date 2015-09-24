@@ -8,7 +8,8 @@
         vid='media/',
         js='js/',
         fonts = {
-            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>'        },
+            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>',
+            'scroll_bar': '<link rel=\"stylesheet\" href=\"css/scrollbar.css\" type=\"text/css\" media=\"screen\" title=\"\" charset=\"utf-8\" />'        },
         opts = {
             'gAudioPreloadPreference': 'auto',
             'gVideoPreloadPreference': 'auto'
@@ -16,6 +17,8 @@
         resources = [
         ],
         scripts = [
+            js+"jquery-1.11.3.min.js",
+            js+"zoomUtilities.js"
         ],
         symbols = {
             "stage": {
@@ -30,7 +33,7 @@
                         {
                             id: 'contacce',
                             type: 'rect',
-                            rect: ['193px', '180px', '1550px', '424px', 'auto', 'auto'],
+                            rect: ['193px', '180px', '1550px', '469px', 'auto', 'auto'],
                             borderRadius: ["0px", "0px", "15px 15px", "15px 15px"],
                             fill: ["rgba(255,255,255,1)"],
                             stroke: [0,"rgba(0, 0, 0, 0)","none"]
@@ -44,7 +47,7 @@
                             stroke: [0,"rgba(0, 0, 0, 0)","none"]
                         },
                         {
-                            id: 'TextCopy',
+                            id: 'texto_1',
                             type: 'text',
                             rect: ['304px', '77px', 'auto', 'auto', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">​Accesibilidad</p>",
@@ -62,23 +65,23 @@
                             id: 'icono_descargar',
                             type: 'image',
                             tag: 'img',
-                            rect: ['922px', '435px', '93px', '96px', 'auto', 'auto'],
+                            rect: ['889px', '437px', '159px', '164px', 'auto', 'auto'],
                             cursor: 'pointer',
                             fill: ["rgba(0,0,0,0)",im+"descargable2.png",'0px','0px']
                         },
                         {
-                            id: 'Subtitulo',
+                            id: 'texto_3',
                             type: 'text',
-                            rect: ['538px', '365px', '860px', '42px', 'auto', 'auto'],
+                            rect: ['232px', '365px', '1483px', '42px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">Haga clic en el icono para descargar el PDF</p>",
                             align: "center",
                             font: ['source-sans-pro, sans-serif', [32, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
                             textStyle: ["", "", "40px", "", "none"]
                         },
                         {
-                            id: 'Titulo',
+                            id: 'texto_2',
                             type: 'text',
-                            rect: ['563px', '261px', '811px', '70px', 'auto', 'auto'],
+                            rect: ['232px', '261px', '1483px', '70px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">​<span style=\"font-size: 51px; font-weight: 700;\">Ayudas para discapacidad visual</span></p>",
                             align: "center",
                             font: ['source-sans-pro, sans-serif', [32, "px"], "rgba(62,34,85,1)", "400", "none", "normal", "break-word", "normal"],
@@ -179,17 +182,16 @@
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
-                            id: 'cerrar',
                             transform: [[], [], [], ['0.5', '0.5']],
+                            id: 'cerrar',
                             type: 'image',
+                            rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '75px', '76px']
+                            rect: [null, null, '75px', '76px']
                         }
                     }
                 },

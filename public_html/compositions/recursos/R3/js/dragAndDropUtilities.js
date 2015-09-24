@@ -42,8 +42,9 @@
 
 $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
     var stage = $(data.sym.getComposition().getStage().ele);
+    console.log(data);
 
-    if (data.show_answers) {
+    if (!isEmpty(data.show_answers) && data.show_answers) {
         switch (stage.prop("tipo")) {
             case "uno a uno":
             {
@@ -59,7 +60,7 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
         }
     }
 
-    if (data.block) {
+    if (!isEmpty(data.block) && data.block) {
         inhabilitarDragsYDrops(data.sym);
         stage.prop("blocked", true);
         if (stage.prop("usa_timer")) {
@@ -67,13 +68,12 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
         }
     } else {
         if (stage.prop("usa_timer")) {
-            if (data.timer.reset_timer) {
+            if (!isEmpty(data.timer) && data.timer.hasOwnProperty("reset_timer") && data.timer.reset_timer) {
                 resetTimer(data.sym);
             }
         }
     }
     stage.prop("intentos_previos", data.attempts);
-
 });
 
 $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
@@ -211,7 +211,8 @@ function inicializarDragAndDropUnoaUno(sym)
 
                 //actualiza propiedad current_drag del objeto drop con el nuevo elemento drag soltado sobre Ã©l
 
-                if (dragObj == null)
+                var cambio = true;
+                if (dragObj === null)
                 {
                     dropObj.prop("current_drag", $(ui.draggable));
                 }
@@ -220,9 +221,11 @@ function inicializarDragAndDropUnoaUno(sym)
                         var position = dragObj.prop("posicion_inicial");
                         moverDrag(dragObj, position);
                         dropObj.prop("current_drag", $(ui.draggable));
+                    } else {
+                        cambio = false;
                     }
                 }
-                
+
                 ubicarDragEnCentroDeDrop($(ui.draggable), dropObj);
 
                 //Establece la propiedad correct dependiendo de si el objeto soltado corresponde a la respuesta.
@@ -234,15 +237,19 @@ function inicializarDragAndDropUnoaUno(sym)
                 else {
                     dropObj.prop("correct", false);
                 }
+
+                if (cambio) {
+                    //enviarCambios(sym);
+                }
             },
             //Cuando un drag es retirado del elemento drop.
             out: function (event, ui) {
                 var dropObj = $(this);
                 var dragObj = $(ui.draggable);
-                if(!isEmpty(dropObj.prop("current_drag")) && dragObj.prop("nombre") === dropObj.prop("current_drag").prop("nombre")){
-                dropObj.prop("current_drag", null);
-                dropObj.prop("correct", false);
-            }
+                if (!isEmpty(dropObj.prop("current_drag")) && dragObj.prop("nombre") === dropObj.prop("current_drag").prop("nombre")) {
+                    dropObj.prop("current_drag", null);
+                    dropObj.prop("correct", false);
+                }
             }
         });
     }
@@ -303,10 +310,12 @@ function inicializarDragAndDropUnoaMuchos(sym)
             drop: function (event, ui) {
 
                 var dropObj = $(this);
-                var dropObjName = dropObj.prop("nombre");
                 var dragObj = $(ui.draggable);
 
                 var solutionArray = stage.prop("drops")[nombreANumero(dropObj.prop("nombre"))].accepted;
+                
+                var cambio = true;
+                cambio = !dropObj.prop("current_drags").hasOwnProperty(dragObj.prop("nombre"))
 
                 dropObj.prop("current_drags")[dragObj.prop("nombre")] = dragObj;
 
@@ -314,37 +323,8 @@ function inicializarDragAndDropUnoaMuchos(sym)
                 $.each(dropObj.prop("current_drags"), function (key, val) {
                     cont++;
                 });
-                
+
                 ubicarDragEnBordes(dragObj, dropObj);
-
-                var correct = true;
-                if (solutionArray.length == cont) {
-                    $.each(dropObj.prop("current_drags"), function (key, val) {
-                        if ($.inArray(nombreANumero(key), solutionArray) < 0) {
-                            correct = false;
-                            return false;
-                        }
-                    });
-                } else {
-                    correct = false;
-                }
-
-                dropObj.prop("correct", correct);
-            },
-            //Cuando un drag es retirado del elemento drop.
-            out: function (event, ui) {
-                var dropObj = $(this);
-                var dragObj = $(ui.draggable);
-                if (dropObj.prop("current_drags").hasOwnProperty(dragObj.prop("nombre"))) {
-                
-                delete dropObj.prop("current_drags")[dragObj.prop("nombre")];
-                    
-                var solutionArray = stage.prop("drops")[nombreANumero(dropObj.prop("nombre"))].accepted;
-
-                var cont = 0;
-                $.each(dropObj.prop("current_drags"), function (key, val) {
-                    cont++;
-                });
 
                 var correct = true;
                 if (solutionArray.length === cont) {
@@ -357,7 +337,40 @@ function inicializarDragAndDropUnoaMuchos(sym)
                 } else {
                     correct = false;
                 }
+
                 dropObj.prop("correct", correct);
+                
+                if (cambio) {
+                    //enviarCambios(sym);
+                }
+            },
+            //Cuando un drag es retirado del elemento drop.
+            out: function (event, ui) {
+                var dropObj = $(this);
+                var dragObj = $(ui.draggable);
+                if (dropObj.prop("current_drags").hasOwnProperty(dragObj.prop("nombre"))) {
+
+                    delete dropObj.prop("current_drags")[dragObj.prop("nombre")];
+
+                    var solutionArray = stage.prop("drops")[nombreANumero(dropObj.prop("nombre"))].accepted;
+
+                    var cont = 0;
+                    $.each(dropObj.prop("current_drags"), function (key, val) {
+                        cont++;
+                    });
+
+                    var correct = true;
+                    if (solutionArray.length === cont) {
+                        $.each(dropObj.prop("current_drags"), function (key, val) {
+                            if ($.inArray(nombreANumero(key), solutionArray) < 0) {
+                                correct = false;
+                                return false;
+                            }
+                        });
+                    } else {
+                        correct = false;
+                    }
+                    dropObj.prop("correct", correct);
                 }
             }
         });
@@ -368,7 +381,8 @@ function inicializarDragAndDropUnoaMuchos(sym)
 
 //revisa la propiedad correct de todos los drops para verificar si la respuesta es correcta y ejecuta una acciÃ³n
 function checkAnswersDragAndDrop(sym) {
-
+    
+    console.log("CHECK DRAGDROP CHECK DRAGDROP CHECK DRAGDROP CHECK DRAGDROP ");
     var stage = $(sym.getComposition().getStage().ele);
     if (!stage.prop("blocked"))
     {
@@ -399,12 +413,13 @@ function checkAnswersDragAndDrop(sym) {
                 break;
             }
         }
-
+        
         var timer = {};
         if (stage.prop("usa_timer")) {
             var timerObj = buscar_sym(sym, stage.prop("timer"), true);
             timer.remaining_time = timerObj.prop("segundos_restantes");
             timer.current_state = timerObj.prop("alertState");
+
         } else {
             //timer.timerObj = null;
             timer.remaining_time = null;
@@ -419,7 +434,26 @@ function checkAnswersDragAndDrop(sym) {
             enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), objRespuesta, "incorrect", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
         }
     }
+}
 
+//revisa la propiedad correct de todos los drops para verificar si la respuesta es correcta y ejecuta una acciÃ³n
+function enviarCambios(sym) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var objRespuesta;
+    switch (stage.prop("tipo")) {
+        case "uno a uno":
+        {
+            objRespuesta = getRespuestaDragAndDropUnoAUno(sym);
+            break;
+        }
+
+        case "uno a muchos":
+        {
+            objRespuesta = getRespuestaDragAndDropUnoAMuchos(sym);
+            break;
+        }
+    }
+    enviarEventoCambio(sym, objRespuesta);
 }
 
 //***********************************************************************
@@ -429,6 +463,12 @@ function checkAnswersDragAndDrop(sym) {
 function mostrarRespuestasDragAndDropUnoAUno(sym) {
     var stage = $(sym.getComposition().getStage().ele);
     var CANTIDAD_DROPS = stage.prop("cantidad_drops");
+    var CANTIDAD_DRAGS = stage.prop("cantidad_drags");
+
+    for (var i = 1; i <= CANTIDAD_DRAGS; i++) {
+        var newposition = sym.$('DRAG_' + i).prop("posicion_inicial");
+        moverDrag(sym.$('DRAG_' + i), newposition);
+    }
 
     for (var i = 1; i <= CANTIDAD_DROPS; i++) {
         ubicarDragEnCentroDeDrop(sym.$('DRAG_' + i), sym.$('DROP_' + i));
@@ -445,6 +485,11 @@ function mostrarRespuestasDragAndDropUnoAMuchos(sym) {
     var dropsObj = stage.prop("drops");
 
     //console.log(dropsObj);
+
+    for (var i = 1; i <= stage.prop("cantidad_drags"); i++) {
+        var newposition = sym.$('DRAG_' + i).prop("posicion_inicial");
+        moverDrag(sym.$('DRAG_' + i), newposition);
+    }
 
     $.each(dropsObj, function (key, val) {
         var arrayDrags = [];
@@ -569,7 +614,7 @@ function ubicarDragsEnDrop(drags, drop) {
     $.each(drags, function (key, value) {
         if ((currentLeft + $(value[0]).width()) > (dropPosition.left + dropWidth))
         {
-            currentTop += ($(value[0]).height() + (margen*2));
+            currentTop += ($(value[0]).height() + (margen * 2));
             console.log($(value[0]).height());
             currentLeft = dropPosition.left + margen;
         }
@@ -587,8 +632,8 @@ function ubicarDragsEnDrop(drags, drop) {
 //Ubica un drag en el centro de un drop pasados como parÃ¡metros.
 
 function ubicarDragEnBordes(drag, drop) {
-    var dropPosition = drop.offset();
-    var dragPosition = drag.offset();
+    var dropPosition = drop.position();
+    var dragPosition = drag.position();
 
     var dragWidth = drag.width();
     var dragHeight = drag.height();
@@ -597,25 +642,25 @@ function ubicarDragEnBordes(drag, drop) {
     var dropHeight = drop.height();
 
     var newposition = {top: dragPosition.top, left: dragPosition.left};
-    var margen = 10;
-    
-    if(dragPosition.left < dropPosition.left){
+    var margen = 5;
+
+    if (dragPosition.left < dropPosition.left) {
         newposition.left = dropPosition.left + margen;
     }
-    
-    if((dragPosition.left+dragWidth) > (dropPosition.left + dropWidth)){
+
+    if ((dragPosition.left + dragWidth) > (dropPosition.left + dropWidth)) {
         newposition.left = (dropPosition.left + dropWidth) - dragWidth - margen;
     }
-    
-    if(dragPosition.top < dropPosition.top){
+
+    if (dragPosition.top < dropPosition.top) {
         newposition.top = dropPosition.top + margen;
     }
-    
-    if((dragPosition.top+dragHeight) > (dropPosition.top + dropHeight)){
-        newposition.top = (dropPosition.top + dropHeight) - dragHeight - (margen*2);
+
+    if ((dragPosition.top + dragHeight) > (dropPosition.top + dropHeight)) {
+        newposition.top = (dropPosition.top + dropHeight) - dragHeight - (margen * 2);
     }
 
-    if(newposition.top !== drag.prop("posicion_inicial").top || newposition.left !== drag.prop("posicion_inicial").left ){
+    if (newposition.top !== drag.prop("posicion_inicial").top || newposition.left !== drag.prop("posicion_inicial").left) {
         moverDrag(drag, newposition);
     }
 }
@@ -702,3 +747,32 @@ function aplicarCambiosPreviosDragAndDrop(dataObj, sym) {
 function inicializar(sym) {
     inicializarDragAndDrop(sym);
 }
+
+//drag and drop móviles
+
+!function (a) {
+    function f(a, b) {
+        if (!(a.originalEvent.touches.length > 1)) {
+            a.preventDefault();
+            var c = a.originalEvent.changedTouches[0], d = document.createEvent("MouseEvents");
+            d.initMouseEvent(b, !0, !0, window, 1, c.screenX, c.screenY, c.clientX, c.clientY, !1, !1, !1, !1, 0, null), a.target.dispatchEvent(d)
+        }
+    }
+    if (a.support.touch = "ontouchend"in document, a.support.touch) {
+        var e, b = a.ui.mouse.prototype, c = b._mouseInit, d = b._mouseDestroy;
+        b._touchStart = function (a) {
+            var b = this;
+            !e && b._mouseCapture(a.originalEvent.changedTouches[0]) && (e = !0, b._touchMoved = !1, f(a, "mouseover"), f(a, "mousemove"), f(a, "mousedown"))
+        }, b._touchMove = function (a) {
+            e && (this._touchMoved = !0, f(a, "mousemove"))
+        }, b._touchEnd = function (a) {
+            e && (f(a, "mouseup"), f(a, "mouseout"), this._touchMoved || f(a, "click"), e = !1)
+        }, b._mouseInit = function () {
+            var b = this;
+            b.element.bind({touchstart: a.proxy(b, "_touchStart"), touchmove: a.proxy(b, "_touchMove"), touchend: a.proxy(b, "_touchEnd")}), c.call(b)
+        }, b._mouseDestroy = function () {
+            var b = this;
+            b.element.unbind({touchstart: a.proxy(b, "_touchStart"), touchmove: a.proxy(b, "_touchMove"), touchend: a.proxy(b, "_touchEnd")}), d.call(b)
+        }
+    }
+}(jQuery);

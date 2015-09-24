@@ -10,8 +10,8 @@
         "1": {
             "type": "actividad",
             "recurso": "61",
-            "actividad": "drag_drop",
-            "url": "recursos/R6_PRE1/esn1le01ob02r6pre1.html",
+            "actividad": "pick_many",
+            "url": "recursos/R6_PRE1/esn1le01ob01r6pre1.html",
             "interaction": {
                 "ALL": true
             },
@@ -21,7 +21,7 @@
             "type": "actividad",
             "recurso": "62",
             "actividad": "pick_many",
-            "url": "recursos/R6_PRE2/esn1le01ob02r6pre2.html",
+            "url": "recursos/R6_PRE2/esn1le01ob01r6pre2.html",
             "interaction": {
                 "ALL": true
             },
@@ -31,7 +31,7 @@
             "type": "actividad",
             "recurso": "63",
             "actividad": "pick_many",
-            "url": "recursos/R6_PRE3/esn1le01ob02r6pre3.html",
+            "url": "recursos/R6_PRE3/esn1le01ob01r6pre3.html",
             "interaction": {
                 "ALL": true
             },
@@ -41,7 +41,7 @@
             "type": "actividad",
             "recurso": "64",
             "actividad": "pick_many",
-            "url": "recursos/R6_PRE4/esn1le01ob02r6pre4.html",
+            "url": "recursos/R6_PRE4/esn1le01ob01r6pre4.html",
             "interaction": {
                 "ALL": true
             },
@@ -51,7 +51,7 @@
             "type": "actividad",
             "recurso": "65",
             "actividad": "pick_many",
-            "url": "recursos/R6_PRE5/esn1le01ob02r6pre5.html",
+            "url": "recursos/R6_PRE5/esn1le01ob01r6pre5.html",
             "interaction": {
                 "ALL": true
             },

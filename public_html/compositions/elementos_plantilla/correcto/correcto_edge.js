@@ -8,7 +8,8 @@
         vid='media/',
         js='js/',
         fonts = {
-            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>'        },
+            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>',
+            'scroll_bar': '<link rel=\"stylesheet\" href=\"css/scrollbar.css\" type=\"text/css\" media=\"screen\" title=\"\" charset=\"utf-8\" />'        },
         opts = {
             'gAudioPreloadPreference': 'auto',
             'gVideoPreloadPreference': 'auto'
@@ -16,6 +17,8 @@
         resources = [
         ],
         scripts = [
+            js+"jquery-1.11.3.min.js",
+            js+"zoomUtilities.js"
         ],
         symbols = {
             "stage": {
@@ -40,15 +43,16 @@
                             id: 'correcto',
                             type: 'image',
                             tag: 'img',
-                            rect: ['885px', '248px', '150px', '150px', 'auto', 'auto'],
+                            rect: ['885px', '236px', '150px', '150px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"correcto.png",'0px','0px']
                         },
                         {
                             id: 'Text',
                             type: 'text',
-                            rect: ['829px', '445px', 'auto', 'auto', 'auto', 'auto'],
+                            rect: ['780px', '420px', '360px', '86px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">​¡Excelente trabajo!</p>",
-                            font: ['source-sans-pro, sans-serif', [32, "px"], "rgba(0,0,0,1)", "600", "none", "", "break-word", "nowrap"]
+                            align: "center",
+                            font: ['source-sans-pro, sans-serif', [32, "px"], "rgba(0,0,0,1)", "600", "none", "", "break-word", ""]
                         },
                         {
                             id: 'cerrar_corr',
@@ -71,26 +75,7 @@
                     duration: 0,
                     autoPlay: true,
                     data: [
-                        [
-                            "eid1",
-                            "left",
-                            0,
-                            0,
-                            "linear",
-                            "${cerrar_corr}",
-                            '1077px',
-                            '1077px'
-                        ],
-                        [
-                            "eid2",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${cerrar_corr}",
-                            '189px',
-                            '189px'
-                        ]
+
                     ]
                 }
             },
@@ -112,17 +97,16 @@
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
-                            id: 'cerrar',
-                            transform: [[], [], [], ['0.35', '0.35']],
                             type: 'image',
+                            id: 'cerrar',
+                            rect: ['-49px', '-50px', '151px', '153px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.35', '0.35']],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '53px', '54px']
+                            rect: [null, null, '53px', '54px']
                         }
                     }
                 },

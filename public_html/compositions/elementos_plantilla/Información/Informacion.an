@@ -7,11 +7,11 @@
 			"timelineColor3":"0x4a485e",
 			"timelineColor":"0x63599f"},
 		"element_${Btn_cerrar}":{
-			"timelineColor2":"0xb099ce",
-			"timelineColor3":"0x70657c",
-			"timelineColor":"0xceaef4",
 			"epOpened":"true",
-			"invisible":"false"},
+			"invisible":"false",
+			"timelineColor":"0xceaef4",
+			"timelineColor2":"0xb099ce",
+			"timelineColor3":"0x70657c"},
 		"element_${Rectangle2}":{
 			"timelineColor2":"0x107faa",
 			"timelineColor3":"0x295a6d",
@@ -56,15 +56,15 @@
 \
    }}\
 }",
-	"expanded:images/cerrar.png":"nil",
 	"expanded:images/informacion.png":"nil",
+	"expanded:images/cerrar.png":"nil",
 	"cerrar_info-Default Timeline_playhead_ms":"0",
 	"HTMLFileName":"Informacion.html",
 	"symbol_Precargador":{
-		"dummyStageParentWidth":"1920px",
+		"defaultStageParentHeight":"1080px",
 		"dummyStageParentHeight":"1080px",
 		"defaultStageParentWidth":"1920px",
-		"defaultStageParentHeight":"1080px",
+		"dummyStageParentWidth":"1920px",
 		"element_${preloader4}":{
 			"timelineColor2":"0x326a96",
 			"timelineColor3":"0x385063",
@@ -74,7 +74,7 @@
 	"expanded:images/2015-08-06%2011_30_17-undefined%20undefined%20undefined.jpg":"nil",
 	"expanded:images/2015-08-06%2012_15_55-.jpg":"nil",
 	"expanded:images/2015-08-06%2010_49_48-Articulate%20Storyline%202%20-%20%5Besn1le01ob02.story%5D.jpg":"nil",
-	"pref__general__AutoKeyframePropertiesArmed":"true",
+	"pref__general__AutoKeyframePropertiesArmed":"false",
 	"expanded:images/2015-08-06%2012_23_39-Articulate%20Storyline%202%20-%20%5Besn1le01ob02.story_%5D.jpg":"nil",
 	"symbol_stage":{
 		"element_${_2015-08-06_11_30_17-undefined_undefined_undefined}":{
@@ -101,6 +101,10 @@
 			"timelineColor3":"0x2a6a61",
 			"animationEnabled":"false",
 			"timelineColor":"0x00bda4"},
+		"element_${texto_1}":{
+			"timelineColor2":"0x81aa62",
+			"timelineColor3":"0x5b6c4d",
+			"timelineColor":"0x91c767"},
 		"element_${Fondo_gris}":{
 			"timelineColor2":"0xb099ce",
 			"timelineColor3":"0x70657c",
@@ -123,20 +127,16 @@
 			"timelineColor3":"0x5b6c4d",
 			"animationEnabled":"false",
 			"timelineColor":"0x91c767"},
-		"element_${Text}":{
-			"timelineColor2":"0x81aa62",
-			"timelineColor3":"0x5b6c4d",
-			"timelineColor":"0x91c767"},
 		"element_${cerrar_info}":{
 			"timelineColor2":"0x1aa38f",
 			"timelineColor3":"0x2a6a61",
 			"animationEnabled":"true",
 			"timelineColor":"0x00bda4"},
-		"element_${creditos}":{
-			"timelineColor2":"0xba5b89",
-			"timelineColor3":"0x734a5f",
+		"element_${Texto_creditos}":{
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
 			"animationEnabled":"false",
-			"timelineColor":"0xdb619d"},
+			"timelineColor":"0xfb657a"},
 		"element_${Rectangle2}":{
 			"timelineColor2":"0x168c84",
 			"timelineColor3":"0x2a605c",
@@ -165,16 +165,18 @@
 			"timelineColor3":"0x2a605c",
 			"animationEnabled":"false",
 			"timelineColor":"0x00a096"},
-		"element_${Texto_creditos}":{
-			"timelineColor2":"0xd35d6e",
-			"timelineColor3":"0x7e4b52",
+		"element_${creditos}":{
+			"timelineColor2":"0xba5b89",
+			"timelineColor3":"0x734a5f",
 			"animationEnabled":"false",
-			"timelineColor":"0xfb657a"},
-		"element_${Text3}":{
-			"timelineColor2":"0x5a558a",
-			"timelineColor3":"0x4a485e",
+			"timelineColor":"0xdb619d"},
+		"element_${Banner_informacion}":{
+			"timelineColor2":"0xd8b467",
+			"timelineColor3":"0x81714f",
+			"timelineColor":"0xffd46d",
 			"locked":"false",
-			"timelineColor":"0x63599f"},
+			"animationEnabled":"false",
+			"invisible":"false"},
 		"element_${contacce}":{
 			"timelineColor2":"0xcbbd71",
 			"timelineColor3":"0x7b7652",
@@ -207,13 +209,11 @@
 			"animationEnabled":"false",
 			"timelineColor":"0x2f73ad"},
 		"defaultStageParentWidth":"1920px",
-		"element_${Banner_informacion}":{
-			"timelineColor2":"0xd8b467",
-			"timelineColor3":"0x81714f",
-			"timelineColor":"0xffd46d",
+		"element_${texto_2}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
 			"locked":"false",
-			"animationEnabled":"false",
-			"invisible":"false"},
+			"timelineColor":"0x63599f"},
 		"element_${Btn_cerrar}":{
 			"timelineColor2":"0x4fa275",
 			"timelineColor3":"0x456a55",

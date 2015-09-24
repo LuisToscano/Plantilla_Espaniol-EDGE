@@ -34,10 +34,17 @@
 
         Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function (sym, e) {
             // Insertar código para ejecutarse cuando el símbolo se crea aquí
-            $(".center-wrapper").css({overflow: "hidden"});
+            $(".center-wrapper, body").css({overflow: "hidden"});
 
         });
         //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${icono_descargar}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         window.open("../../../media/pdf/accessibility.pdf", "_blank");
+
+      });
+      //Edge binding end
 
     })("stage");
    //Edge symbol end:'stage'

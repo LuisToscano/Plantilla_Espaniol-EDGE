@@ -264,7 +264,8 @@ function load_pages(sym_contenedor, strPagina, pagina, objRetro) {
 
     var objEvt = {
         type: "EDGE_Self_promiseCreating",
-        identify: pagina
+        identify: pagina,
+        pagina: strPagina
     };
     $("body").trigger(merge_options(objEvt));
 

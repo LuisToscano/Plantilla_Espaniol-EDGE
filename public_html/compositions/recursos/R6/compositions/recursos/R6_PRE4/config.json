@@ -1,22 +1,26 @@
 {
     "num_intentos": 2,
-    "pregunta":"Escuche el audio y seleccione la opción que contiene las  palabras mencionadas.",
+    "pregunta":"Seleccione las vocales que tiene la palabra árbol.",
     "picks": {
         "1": {
-            "descripcion": "k, b, g",
+            "descripcion": "u",
             "esRespuesta": false
         },
         "2": {
-            "descripcion": "c, n, j",
+            "descripcion": "i",
             "esRespuesta": true
         },
         "3": {
-            "descripcion": "q, n, p",
-            "esRespuesta": false
+            "descripcion": "o",
+            "esRespuesta": true
         },
         "4": {
-            "descripcion": "s, n, v",
+            "descripcion": "e",
             "esRespuesta": false
-        }    
+        },
+        "5": {
+            "descripcion": "a",
+            "esRespuesta": true
+        }
     }
 }

@@ -1,0 +1,44 @@
+{
+    "num_intentos": 2,
+    "pregunta":"haga clic en cada uno de los botones para observar las imágenes.  Escuche el audio y luego relacione los nombres de la lista desplegable con la letra de la columna. Tiene dos intentos para esta actividad.",
+    "tipo": "uno a uno",
+    "drags": {
+        "1": {
+            "descripcion": "eme"
+        },
+        "2": {
+            "descripcion": "pe"
+        },
+         "3": {
+            "descripcion": "erre"
+        },
+         "4": {
+            "descripcion": "ese"
+        },
+         "5": {
+            "descripcion": "hache"
+        }
+    },
+    "drops": {
+        "1": {
+            "descripcion": "recuadro eme",
+            "accepted": []
+        },
+        "2": {
+            "descripcion": "recuadro pe",
+            "accepted": []
+        },
+        "3": {
+            "descripcion": "recuadro erre",
+            "accepted": []
+        },
+        "4": {
+            "descripcion": "recuadro ese",
+            "accepted": []
+        },
+        "5": {
+            "descripcion": "recuadro hache",
+            "accepted": []
+        }
+    }
+}

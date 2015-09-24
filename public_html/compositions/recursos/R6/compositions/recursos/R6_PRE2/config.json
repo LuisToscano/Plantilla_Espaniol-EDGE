@@ -1,23 +1,32 @@
 {
     "num_intentos": 2,
-    "pregunta":"¿Como se deletrea el audio?",
+    "pregunta":"¿Cuál de las siguientes imágenes empieza con la letra m?",
     "picks": {
         "1": {
-            "descripcion": "pe- a- ese- o",
-            "esRespuesta": true
-        },
-        "2": {
-            "descripcion": "te- ere- a- zeta- o",
+            "descripcion": "faro",
             "esRespuesta": false
         },
+        "2": {
+            "descripcion": "mesa",
+            "esRespuesta": true
+        },
         "3": {
-            "descripcion": "eme- a- zeta- o",
+            "descripcion": "uva",
             "esRespuesta": false
         },
         "4": {
-            "descripcion": "be- ere- a- zeta- o ama",
+            "descripcion": "árbol",
             "esRespuesta": false
-        }      
-        
+        }
+        ,
+        "5": {
+            "descripcion": "dedo",
+            "esRespuesta": false
+        }
+        ,
+        "6": {
+            "descripcion": "burro",
+            "esRespuesta": false
+        }
     }
 }

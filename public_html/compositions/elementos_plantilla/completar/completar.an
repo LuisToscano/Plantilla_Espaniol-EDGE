@@ -3,31 +3,51 @@
 
 	"HTMLFileName":"completar.html",
 	"expanded:images/cerrar.png":"nil",
-	"expanded:images/correcto.png":"nil",
+	"ModelData":"{\
+\"stage\": {\
+   \"timelines\": {\
+      \"Default Timeline\": {\
+      }\
+   }},\
+\"cerrar_comple\": {\
+   \"timelines\": {\
+      \"Default Timeline\": {\
+      }\
+   }},\
+\"Precargador\": {\
+   \"timelines\": {\
+\
+   }},\
+\"Nivel inferior\": {\
+   \"timelines\": {\
+\
+   }}\
+}",
 	"expanded:images/incorrecto.png":"nil",
 	"symbol_Precargador":{
-		"defaultStageParentHeight":"400px",
+		"dummyStageParentWidth":"400px",
 		"dummyStageParentHeight":"400px",
 		"defaultStageParentWidth":"400px",
 		"element_${preloader4}":{
 			"timelineColor2":"0xd35d6e",
 			"timelineColor3":"0x7e4b52",
 			"timelineColor":"0xfb657a"},
-		"dummyStageParentWidth":"400px"},
+		"defaultStageParentHeight":"400px"},
 	"expanded:images/preloader4.gif":"nil",
 	"pref__general__FilterNonAnimatedElements":"false",
-	"pref__general__AutoKeyframePropertiesArmed":"true",
-	"cerrar_comple-Default Timeline_playhead_ms":"0",
+	"viewStartY":"0",
+	"pref__general__AutoKeyframePropertiesArmed":"false",
+	"usedBOM":"false",
 	"symbol_stage":{
-		"element_${Text}":{
-			"timelineColor2":"0x1aa38f",
-			"timelineColor3":"0x2a6a61",
-			"timelineColor":"0x00bda4"},
 		"element_${RoundRect}":{
 			"timelineColor2":"0x81aa62",
 			"timelineColor3":"0x5b6c4d",
 			"timelineColor":"0x91c767"},
 		"dummyStageParentHeight":"1080px",
+		"element_${texto_1}":{
+			"timelineColor2":"0x1aa38f",
+			"timelineColor3":"0x2a6a61",
+			"timelineColor":"0x00bda4"},
 		"element_${cerrar_comple}":{
 			"timelineColor2":"0xb099ce",
 			"timelineColor3":"0x70657c",
@@ -66,9 +86,12 @@
 		"dummyStageParentWidth":"1920px"},
 	"TransitionIdCounter":"7",
 	"CompZoomFactor":"100",
-	"viewStartY":"0",
-	"pixelsPerMs":"0.2",
 	"StageZoomFactor":"111",
+	"pixelsPerMs":"0.2",
+	"stage-Default Timeline_playhead_ms":"0",
+	"cerrar_comple-Default Timeline_playhead_ms":"0",
+	"mediagroup_media/attempt-fail.mp3":"attempt-fail",
+	"nextElementColorIndex":"13",
 	"symbol_cerrar_comple":{
 		"element_${cerrar}":{
 			"timelineColor2":"0x168c84",
@@ -78,28 +101,6 @@
 			"timelineColor2":"0xba5b89",
 			"timelineColor3":"0x734a5f",
 			"timelineColor":"0xdb619d"}},
-	"usedBOM":"false",
-	"nextElementColorIndex":"13",
-	"stage-Default Timeline_playhead_ms":"0",
 	"expanded:images/completar.png":"nil",
 	"Precargador-Default Timeline_playhead_ms":"0",
-	"ModelData":"{\
-\"stage\": {\
-   \"timelines\": {\
-      \"Default Timeline\": {\
-      }\
-   }},\
-\"cerrar_comple\": {\
-   \"timelines\": {\
-      \"Default Timeline\": {\
-      }\
-   }},\
-\"Precargador\": {\
-   \"timelines\": {\
-\
-   }},\
-\"Nivel inferior\": {\
-   \"timelines\": {\
-\
-   }}\
-}"}
+	"expanded:images/correcto.png":"nil"}

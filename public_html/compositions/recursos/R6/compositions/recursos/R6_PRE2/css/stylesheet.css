@@ -1,0 +1,10 @@
+@font-face{
+    font-family:'sena_icon';
+    src:url('../font/sena.eot');
+    src:url('../font/sena.eot?#iefix') format('embedded-opentype'),
+        url('../font/sena.woff') format('woff'),
+        url('../font/sena.ttf') format('truetype'),
+        url('../font/sena.svg#glyphicons_halflingsregular') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}

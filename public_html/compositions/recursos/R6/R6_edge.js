@@ -23,7 +23,8 @@
             js+"timerUtilities.js",
             js+"actividades_result.js",
             js+"r6.js",
-            js+"r6_puntaje.js"
+            js+"r6_puntaje.js",
+            js+"zoomUtilities.js"
         ],
         symbols = {
             "stage": {
@@ -39,7 +40,8 @@
                             id: 'medidor_examen-01',
                             display: 'none',
                             type: 'image',
-                            rect: ['637px', '253px', '555px', '274px', 'auto', 'auto'],
+                            tag: 'img',
+                            rect: ['638px', '253px', '555px', '274px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"medidor%20examen-01.png",'0px','0px']
                         },
                         {
@@ -56,7 +58,7 @@
                             rect: ['857px', '462px', '115px', '115px', 'auto', 'auto'],
                             borderRadius: ["50%", "50%", "50%", "50%"],
                             fill: ["rgba(192,192,192,1)"],
-                            stroke: [0,"rgba(0,0,0,1)","none"]
+                            stroke: [1,"rgba(0,0,0,1)","none"]
                         },
                         {
                             id: 'text_percent',
@@ -66,7 +68,7 @@
                             rect: ['869px', '503', '91', '33', 'auto', 'auto']
                         },
                         {
-                            id: 'Text3',
+                            id: 'texto_3',
                             display: 'none',
                             type: 'text',
                             rect: ['808px', '47px', 'auto', 'auto', 'auto', 'auto'],
@@ -85,31 +87,36 @@
                             id: 'R6_1',
                             symbolName: 'R6_1',
                             type: 'rect',
-                            rect: ['-1840px', '0px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['-1840px', '0px', 'undefined', 'undefined', 'auto', 'auto'],
+                            transform: [[],[],[],['1','1.00064']]
                         },
                         {
                             id: 'R6_2',
                             symbolName: 'R6_2',
                             type: 'rect',
-                            rect: ['1840px', '0px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1840px', '1px', 'undefined', 'undefined', 'auto', 'auto'],
+                            transform: [[],[],[],['1','1.00064']]
                         },
                         {
                             id: 'R6_3',
                             symbolName: 'R6_3',
                             type: 'rect',
-                            rect: ['1840px', '0px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1840px', '1px', 'undefined', 'undefined', 'auto', 'auto'],
+                            transform: [[],[],[],['1','1.00064']]
                         },
                         {
                             id: 'R6_4',
                             symbolName: 'R6_4',
                             type: 'rect',
-                            rect: ['1840px', '0px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1840px', '1px', 'undefined', 'undefined', 'auto', 'auto'],
+                            transform: [[],[],[],['1','1.00064']]
                         },
                         {
                             id: 'R6_5',
                             symbolName: 'R6_5',
                             type: 'rect',
-                            rect: ['1840px', '0px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['1840px', '1px', 'undefined', 'undefined', 'auto', 'auto'],
+                            transform: [[],[],[],['1','1.00064']]
                         },
                         {
                             id: 'Nav_R6_14',
@@ -192,7 +199,7 @@
                     labels: {
                         "slide_1": 500,
                         "slide_2": 1000,
-                        "slide_3": 1500,
+                        "slide_3": 1460,
                         "slide_4": 2000,
                         "slide_5": 2500,
                         "slide_final": 3000
@@ -291,7 +298,7 @@
                         [
                             "eid253",
                             "display",
-                            2905,
+                            3000,
                             0,
                             "linear",
                             "${text_percent}",
@@ -319,24 +326,34 @@
                             'none'
                         ],
                         [
-                            "eid96",
+                            "eid223",
                             "display",
-                            1960,
+                            0,
                             0,
                             "linear",
-                            "${Nav_R6_42}",
+                            "${medidor}",
                             'none',
-                            'block'
+                            'none'
                         ],
                         [
-                            "eid97",
+                            "eid228",
                             "display",
-                            2455,
+                            643,
                             0,
                             "linear",
-                            "${Nav_R6_42}",
-                            'block',
+                            "${medidor}",
+                            'none',
                             'none'
+                        ],
+                        [
+                            "eid255",
+                            "display",
+                            2905,
+                            0,
+                            "linear",
+                            "${medidor}",
+                            'none',
+                            'block'
                         ],
                         [
                             "eid44",
@@ -429,34 +446,24 @@
                             'none'
                         ],
                         [
-                            "eid226",
+                            "eid96",
                             "display",
-                            0,
+                            1960,
                             0,
                             "linear",
-                            "${Text3}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid231",
-                            "display",
-                            643,
-                            0,
-                            "linear",
-                            "${Text3}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid252",
-                            "display",
-                            2905,
-                            0,
-                            "linear",
-                            "${Text3}",
+                            "${Nav_R6_42}",
                             'none',
                             'block'
+                        ],
+                        [
+                            "eid97",
+                            "display",
+                            2455,
+                            0,
+                            "linear",
+                            "${Nav_R6_42}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid43",
@@ -549,32 +556,32 @@
                             'block'
                         ],
                         [
-                            "eid223",
+                            "eid226",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${medidor}",
+                            "${texto_3}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid228",
+                            "eid231",
                             "display",
                             643,
                             0,
                             "linear",
-                            "${medidor}",
+                            "${texto_3}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid255",
+                            "eid252",
                             "display",
-                            2905,
+                            3000,
                             0,
                             "linear",
-                            "${medidor}",
+                            "${texto_3}",
                             'none',
                             'block'
                         ],
@@ -640,7 +647,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid308",
+                            "eid518",
                             "-moz-transform-origin",
                             3000,
                             0,
@@ -651,7 +658,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid309",
+                            "eid519",
                             "-ms-transform-origin",
                             3000,
                             0,
@@ -662,7 +669,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid310",
+                            "eid520",
                             "msTransformOrigin",
                             3000,
                             0,
@@ -673,7 +680,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid311",
+                            "eid521",
                             "-o-transform-origin",
                             3000,
                             0,
@@ -684,7 +691,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid312",
+                            "eid522",
                             "transform-origin",
                             3000,
                             0,
@@ -706,7 +713,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid313",
+                            "eid523",
                             "-moz-transform-origin",
                             6750,
                             0,
@@ -717,7 +724,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid314",
+                            "eid524",
                             "-ms-transform-origin",
                             6750,
                             0,
@@ -728,7 +735,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid315",
+                            "eid525",
                             "msTransformOrigin",
                             6750,
                             0,
@@ -739,7 +746,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid316",
+                            "eid526",
                             "-o-transform-origin",
                             6750,
                             0,
@@ -750,7 +757,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid317",
+                            "eid527",
                             "transform-origin",
                             6750,
                             0,
@@ -805,38 +812,45 @@
                         {
                             rect: ['37px', '29px', '563px', '749px', 'auto', 'auto'],
                             borderRadius: ['17px', '17px', '17px', '17px 17px'],
-                            boxShadow: ['', 0, 0, 2, 2, 'rgba(147,148,142,1.00)'],
+                            tag: 'img',
                             id: 'IMG_R6',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/IMG_R62.png', '0px', '0px'],
-                            type: 'image',
-                            tag: 'img'
-                        },
-                        {
-                            rect: ['632px', '32px', '1198px', '377px', 'auto', 'auto'],
-                            id: 'Text',
-                            text: '<p style=\"margin: 0px;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700; color: rgb(51, 51, 51);\">Este test evalúa lo que ha aprendido en este objeto de aprendizaje.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">Instrucciones:</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">1. Lea cada pregunta cuidadosamente.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">2. Debe responder todas las preguntas propuestas.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">3. El test debe ser enviado una sola vez.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700; color: rgb(51, 51, 51);\">Recuerde:</span><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\"> cuando haga clic sobre </span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 800; color: rgb(51, 51, 51);\">Enviar</span><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">, no podrá modificar ninguna respuesta.</span></p><p style=\"margin: 0px;\"><span style=\"color: rgb(51, 51, 51);\">​</span></p>',
-                            font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(51,51,51,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
-                            type: 'text'
-                        },
-                        {
-                            id: 'precarga_gif',
-                            type: 'image',
-                            rect: ['1141px', '438px', '161px', '12px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/precarga_gif.gif', '0px', '0px']
+                            boxShadow: ['', 0, 0, 2, 2, 'rgba(147,148,142,1.00)']
                         },
                         {
                             type: 'rect',
-                            rect: ['1054', '419px', '335', '49', 'auto', 'auto'],
-                            display: 'none',
-                            symbolName: 'btn_evaluemos',
-                            cursor: 'pointer',
-                            id: 'btn_evaluemosCopy2'
+                            rect: ['632px', '386px', '1198px', '106px', 'auto', 'auto'],
+                            id: 'cont_1',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            fill: ['rgba(192,192,192,0.00)'],
+                            c: [
+                            {
+                                rect: ['509px', '52px', '161px', '12px', 'auto', 'auto'],
+                                id: 'precarga_gif',
+                                type: 'image',
+                                fill: ['rgba(0,0,0,0)', 'images/precarga_gif.gif', '0px', '0px']
+                            },
+                            {
+                                type: 'rect',
+                                id: 'btn_evaluemosCopy2',
+                                display: 'none',
+                                symbolName: 'btn_evaluemos',
+                                cursor: 'pointer',
+                                rect: ['422px', '33px', '335', '49', 'auto', 'auto']
+                            }]
+                        },
+                        {
+                            font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                            id: 'texto_1_empuja_cont_1',
+                            text: '<p style=\"margin: 0px;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700; color: rgb(51, 51, 51);\">Este test evalúa lo que ha aprendido en este objeto de aprendizaje.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">Instrucciones:</span></p><p style=\"margin: 0px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">1. Lea cada pregunta cuidadosamente.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">2. Debe responder todas las preguntas propuestas.</span></p><p style=\"margin: 0px; text-indent: 25px;\"><span style=\"font-style: italic; font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">3. El test debe ser enviado una sola vez.</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">​</span></p><p style=\"margin: 0px;\"><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 700; color: rgb(51, 51, 51);\">Recuerde:</span><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\"> cuando haga clic sobre </span><span style=\"font-family: source-sans-pro, sans-serif; font-weight: 800; color: rgb(51, 51, 51);\">Enviar</span><span style=\"font-family: source-sans-pro, sans-serif; color: rgb(51, 51, 51);\">, no podrá modificar ninguna respuesta.</span></p><p style=\"margin: 0px;\">​</p>',
+                            type: 'text',
+                            rect: ['632px', '32px', '1198px', '348px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '335px', '49px']
+                            rect: [null, null, '335px', '49px']
                         }
                     }
                 },
@@ -1132,14 +1146,14 @@
                             type: 'rect',
                             id: 'RoundRect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '0px', '165px', '38px', 'auto', 'auto'],
+                            rect: ['0px', '0px', '165px', '43px', 'auto', 'auto'],
                             borderRadius: ['23px', '23px', '23px', '23px 23px'],
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(149,115,187,1.00)', 50], ['rgba(120,78,166,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['36px', '3px', '94px', '31px', 'auto', 'auto'],
-                                font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                                id: 'Text',
+                                rect: ['0px', '1px', '165px', '31px', 'auto', 'auto'],
+                                font: ['Arial, Helvetica, sans-serif', [25, 'px'], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                                id: 'texto_2',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Enviar</span></p>',
                                 textShadow: ['rgba(0,0,0,0.49)', 1, 1, 1],
                                 type: 'text'
@@ -1176,7 +1190,7 @@
                             0,
                             250,
                             "linear",
-                            "${Text}",
+                            "${texto_2}",
                             'rgba(0,0,0,0.49)',
                             'rgba(0,0,0,0.65098)'
                         ]
@@ -1201,12 +1215,12 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(111,67,158,1.00)', 50], ['rgba(84,53,118,1.00)', 50]]]],
                             c: [
                             {
-                                rect: ['81px', '5px', '155px', '31px', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [28, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', 'normal'],
+                                type: 'text',
                                 id: 'TextCopy',
                                 text: '<p style=\"margin: 0px; text-align: center;\">​<span style=\"font-family: source-sans-pro, sans-serif; font-weight: 600; color: rgb(255, 255, 255);\">Evaluemos</span></p>',
                                 textShadow: ['rgba(0,0,0,0.65098)', 1, 1, 1],
-                                type: 'text'
+                                rect: ['81px', '5px', '155px', '31px', 'auto', 'auto']
                             }]
                         },
                         {
@@ -1240,13 +1254,13 @@
                 content: {
                     dom: [
                         {
+                            type: 'text',
                             rect: ['0px', '0px', '91px', '33px', 'auto', 'auto'],
-                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '600', 'none', 'normal', 'break-word', 'normal'],
-                            text: '<p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 600; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: center; text-indent: 0px; line-height: normal;\">100%</p>',
-                            id: 'Text2',
                             textStyle: ['', '', '', '', 'none'],
+                            id: 'texto_4',
+                            text: '<p style=\"margin: 0px; font-family: source-sans-pro, sans-serif; font-weight: 600; font-style: normal; text-decoration: none; font-size: 30px; color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-align: center; text-indent: 0px; line-height: normal;\">100%</p>',
                             align: 'center',
-                            type: 'text'
+                            font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '600', 'none', 'normal', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -1275,8 +1289,9 @@
                         {
                             rect: ['0px', '0px', '198px', '27px', 'auto', 'auto'],
                             id: 'medidor_examen-02Copy2',
+                            fill: ['rgba(0,0,0,0)', 'images/medidor%20examen-02.png', '0px', '0px'],
                             type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/medidor%20examen-02.png', '0px', '0px']
+                            tag: 'img'
                         }
                     ],
                     style: {

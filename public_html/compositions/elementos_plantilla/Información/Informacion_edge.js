@@ -8,7 +8,8 @@
         vid='media/',
         js='js/',
         fonts = {
-            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>'        },
+            'source-sans-pro, sans-serif': '<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>',
+            'scroll_bar': '<link rel=\"stylesheet\" href=\"css/scrollbar.css\" type=\"text/css\" media=\"screen\" title=\"\" charset=\"utf-8\" />'        },
         opts = {
             'gAudioPreloadPreference': 'auto',
             'gVideoPreloadPreference': 'auto'
@@ -16,6 +17,8 @@
         resources = [
         ],
         scripts = [
+            js+"jquery-1.11.3.min.js",
+            js+"zoomUtilities.js"
         ],
         symbols = {
             "stage": {
@@ -44,9 +47,9 @@
                             stroke: [0,"rgba(0, 0, 0, 0)","none"]
                         },
                         {
-                            id: 'Text3',
+                            id: 'texto_2',
                             type: 'text',
-                            rect: ['538px', '333px', '860px', '87px', 'auto', 'auto'],
+                            rect: ['209px', '333px', '1512px', '87px', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">​Copyright&nbsp;© SENA 2015.</p><p style=\"margin: 0px;\">​Licenciado para Colombia por el Servicio Nacional de Aprendizaje SENA.</p>",
                             align: "center",
                             font: ['source-sans-pro, sans-serif', [22, "px"], "rgba(0,0,0,1)", "400", "none", "normal", "break-word", "normal"],
@@ -59,7 +62,7 @@
                             fill: ["rgba(0,0,0,0)",im+"informacion.png",'0px','0px']
                         },
                         {
-                            id: 'Text',
+                            id: 'texto_1',
                             type: 'text',
                             rect: ['304px', '77px', 'auto', 'auto', 'auto', 'auto'],
                             text: "<p style=\"margin: 0px;\">​Información</p>",
@@ -162,17 +165,16 @@
                             fill: ['rgba(255,255,255,1)']
                         },
                         {
-                            rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
-                            id: 'cerrar',
-                            transform: [[], [], [], ['0.5', '0.5']],
                             type: 'image',
+                            id: 'cerrar',
+                            rect: ['-38px', '-38px', '151px', '153px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.5', '0.5']],
                             fill: ['rgba(0,0,0,0)', 'images/cerrar.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '76px', '77px']
+                            rect: [null, null, '76px', '77px']
                         }
                     }
                 },
